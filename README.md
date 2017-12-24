@@ -10,7 +10,7 @@ It can parse results from static code analysis and:
  * Report violations in the build log.
  * Optionally fail the build depending on violations found.
 
-A snipped of the output may look like this:
+A snippet of the output may look like this:
 ```
 ...
 Summary of se/bjurr/violations/lib/example/OtherClass.java
@@ -98,33 +98,33 @@ Here is an example:
 buildscript {
  repositories {
   maven { url 'https://plugins.gradle.org/m2/' }
+  jcenter()
  }
  dependencies {
-  classpath "se.bjurr.violations:violations-gradle-plugin:1.0-SNAPSHOT"
+  classpath "se.bjurr.violations:violations-gradle-plugin:1.0"
  }
 }
 
 apply plugin: "se.bjurr.violations.violations-gradle-plugin"
+apply plugin: 'findbugs'
+
+findbugs {
+ ignoreFailures = true
+ effort = "max"
+ showProgress = true
+ reportLevel = "high"
+}
 
 task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
  minSeverity = 'INFO'
  detailLevel = 'VERBOSE' // PER_FILE_COMPACT, COMPACT or VERBOSE
  maxViolations = 99999999
  
+ // Many more formats available, see: https://github.com/tomasbjerre/violations-lib
  violations = [
-  ["FINDBUGS",   ".", ".*/findbugs/.*\\.xml\$",   "Findbugs"],
-  ["PMD",        ".", ".*/pmd/.*\\.xml\$",        "PMD"],
-  ["CHECKSTYLE", ".", ".*/checkstyle/.*\\.xml\$", "Checkstyle"],
-  ["JSHINT",     ".", ".*/jshint/.*\\.xml\$",     "JSHint"],
-  ["CSSLINT",    ".", ".*/csslint/.*\\.xml\$",    "CssLint"]
+  ["FINDBUGS",   ".", ".*/findbugs/.*\\.xml\$",   "Findbugs"]
  ]
 }
+
+check.finalizedBy violations
 ```
-
-You may also have a look at [Violations Lib](https://github.com/tomasbjerre/violations-lib).
-
-## Developer instructions
-
-To build the code you need to run `build.sh` in root of repo. You may also have a look at `.travis.yml`.
-
-To do a release you need to do `./gradlew release -Dgradle.publish.key=... -Dgradle.publish.secret=...` and release the artifact from [staging](https://oss.sonatype.org/#stagingRepositories). More information [here](http://central.sonatype.org/pages/releasing-the-deployment.html).
