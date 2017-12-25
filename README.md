@@ -13,25 +13,40 @@ It can parse results from static code analysis and:
 A snippet of the output may look like this:
 ```
 ...
-Summary of se/bjurr/violations/lib/example/OtherClass.java
+se/bjurr/gitchangelog/internal/settings/Settings.java
+╔══════════╤════════════════╤══════════╤══════╤═════════════════════════════════════════════════════════════════════════════════╗
+║ Reporter │ Rule           │ Severity │ Line │ Message                                                                         ║
+╠══════════╪════════════════╪══════════╪══════╪═════════════════════════════════════════════════════════════════════════════════╣
+║ Findbugs │ EI_EXPOSE_REP2 │ INFO     │ 211  │ May expose internal representation by incorporating reference to mutable object ║
+║          │                │          │      │                                                                                 ║
+║          │                │          │      │                                                                                 ║
+║          │                │          │      │   <p> This code stores a reference to an externally mutable object into the     ║
+║          │                │          │      │   internal representation of the object.&nbsp;                                  ║
+║          │                │          │      │    If instances                                                                 ║
+║          │                │          │      │    are accessed by untrusted code, and unchecked changes to                     ║
+║          │                │          │      │    the mutable object would compromise security or other                        ║
+║          │                │          │      │    important properties, you will need to do something different.               ║
+║          │                │          │      │   Storing a copy of the object is better approach in many situations.</p>       ║
+╚══════════╧════════════════╧══════════╧══════╧═════════════════════════════════════════════════════════════════════════════════╝
+
+Summary of se/bjurr/gitchangelog/internal/settings/Settings.java
 ╔══════════╤══════╤══════╤═══════╤═══════╗
 ║ Reporter │ INFO │ WARN │ ERROR │ Total ║
 ╠══════════╪══════╪══════╪═══════╪═══════╣
-║ Findbugs │ 2    │ 0    │ 0     │ 2     ║
+║ Findbugs │ 1    │ 0    │ 0     │ 1     ║
 ╟──────────┼──────┼──────┼───────┼───────╢
-║          │ 2    │ 0    │ 0     │ 2     ║
+║          │ 1    │ 0    │ 0     │ 1     ║
 ╚══════════╧══════╧══════╧═══════╧═══════╝
 
+
 Summary
-╔════════════╤══════╤══════╤═══════╤═══════╗
-║ Reporter   │ INFO │ WARN │ ERROR │ Total ║
-╠════════════╪══════╪══════╪═══════╪═══════╣
-║ Checkstyle │ 4    │ 1    │ 1     │ 6     ║
-╟────────────┼──────┼──────┼───────┼───────╢
-║ Findbugs   │ 2    │ 2    │ 5     │ 9     ║
-╟────────────┼──────┼──────┼───────┼───────╢
-║            │ 6    │ 3    │ 6     │ 15    ║
-╚════════════╧══════╧══════╧═══════╧═══════╝
+╔══════════╤══════╤══════╤═══════╤═══════╗
+║ Reporter │ INFO │ WARN │ ERROR │ Total ║
+╠══════════╪══════╪══════╪═══════╪═══════╣
+║ Findbugs │ 27   │ 2    │ 0     │ 29    ║
+╟──────────┼──────┼──────┼───────┼───────╢
+║          │ 27   │ 2    │ 0     │ 29    ║
+╚══════════╧══════╧══════╧═══════╧═══════╝
 
 :violations FAILED
 :violations (Thread[main,5,main]) completed. Took 0.148 secs.
@@ -40,7 +55,7 @@ FAILURE: Build failed with an exception.
 
 * What went wrong:
 Execution failed for task ':violations'.
-> javax.script.ScriptException: To many violations found, max is 2 but found 15
+> javax.script.ScriptException: To many violations found, max is 2 but found 29
 ```
 
 It supports:
@@ -92,7 +107,7 @@ It supports:
 ## Usage ##
 There is a running example [here](https://github.com/tomasbjerre/violations-gradle-plugin/tree/master/violations-gradle-plugin-example).
 
-Here is an example: 
+Having the following in the build script will make the plugin run with `./gradlew build -i`.
 
 ```
 buildscript {
@@ -101,7 +116,7 @@ buildscript {
   jcenter()
  }
  dependencies {
-  classpath "se.bjurr.violations:violations-gradle-plugin:1.1"
+  classpath "se.bjurr.violations:violations-gradle-plugin:X"
  }
 }
 
@@ -118,7 +133,7 @@ findbugs {
 task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
  minSeverity = 'INFO'
  detailLevel = 'VERBOSE' // PER_FILE_COMPACT, COMPACT or VERBOSE
- maxViolations = 99999999
+ maxViolations = 99999999 // Will fail the build if total number of found violations is higher
  
  // Many more formats available, see: https://github.com/tomasbjerre/violations-lib
  violations = [

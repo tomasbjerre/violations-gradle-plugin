@@ -6,10 +6,13 @@ import static se.bjurr.violations.lib.model.SEVERITY.INFO;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.script.ScriptException;
+
 import org.gradle.api.DefaultTask;
 import org.gradle.api.tasks.TaskAction;
 import org.gradle.api.tasks.TaskExecutionException;
+
 import se.bjurr.violations.lib.ViolationsReporterDetailLevel;
 import se.bjurr.violations.lib.model.SEVERITY;
 import se.bjurr.violations.lib.model.Violation;
@@ -41,8 +44,6 @@ public class ViolationsTask extends DefaultTask {
 
   @TaskAction
   public void gitChangelogPluginTasks() throws TaskExecutionException, ScriptException {
-    getLogger().info("");
-
     List<Violation> allParsedViolations = new ArrayList<>();
     for (final List<String> configuredViolation : violations) {
       final String reporter = configuredViolation.size() >= 4 ? configuredViolation.get(3) : null;
