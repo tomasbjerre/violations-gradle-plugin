@@ -101,7 +101,7 @@ buildscript {
   jcenter()
  }
  dependencies {
-  classpath "se.bjurr.violations:violations-gradle-plugin:1.0"
+  classpath "se.bjurr.violations:violations-gradle-plugin:1.1"
  }
 }
 
@@ -112,7 +112,7 @@ findbugs {
  ignoreFailures = true
  effort = "max"
  showProgress = true
- reportLevel = "high"
+ reportLevel = "low"
 }
 
 task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
