@@ -6,13 +6,10 @@ import static se.bjurr.violations.lib.model.SEVERITY.INFO;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import javax.script.ScriptException;
-
 import org.gradle.api.DefaultTask;
 import org.gradle.api.tasks.TaskAction;
 import org.gradle.api.tasks.TaskExecutionException;
-
 import se.bjurr.violations.lib.ViolationsReporterDetailLevel;
 import se.bjurr.violations.lib.model.SEVERITY;
 import se.bjurr.violations.lib.model.Violation;
