@@ -66,14 +66,16 @@ public class ViolationsTask extends DefaultTask {
             .withViolations(allParsedViolations) //
             .getReport(detailLevel);
 
-    getLogger().info("\n" + report);
-
     if (allParsedViolations.size() > maxViolations) {
       throw new ScriptException(
           "To many violations found, max is "
               + maxViolations
               + " but found "
-              + allParsedViolations.size());
+              + allParsedViolations.size()
+              + "\n"
+              + report);
+    } else {
+      getLogger().info("\n" + report);
     }
   }
 }
