@@ -65,7 +65,7 @@ public class ViolationsTask extends DefaultTask {
 
     if (allParsedViolations.size() > maxViolations) {
       throw new ScriptException(
-          "To many violations found, max is "
+          "Too many violations found, max is "
               + maxViolations
               + " but found "
               + allParsedViolations.size()
