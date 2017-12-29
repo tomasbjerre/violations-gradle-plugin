@@ -2,6 +2,7 @@ buildscript {
  repositories {
   mavenLocal()
   mavenCentral()
+  jcenter()
  }
 
  dependencies {
@@ -12,10 +13,19 @@ buildscript {
 apply plugin: "se.bjurr.violations.violations-gradle-plugin"
 
 task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
- minSeverity = 'INFO'
+ minSeverity = 'INFO' // INFO, WARN or ERROR
  detailLevel = 'VERBOSE' // PER_FILE_COMPACT, COMPACT or VERBOSE
- maxViolations = 99999999
- 
+ maxViolations = 99999999 // Will fail the build if total number of found violations is higher
+ printViolations = true // Will print violations found in diff
+
+ diffFrom = '' // Can be empty (ignored), Git-commit or any Git-reference
+ diffTo = '' // Same as above
+ diffMinSeverity = 'INFO' // INFO, WARN or ERROR
+ diffDetailLevel = 'VERBOSE' // PER_FILE_COMPACT, COMPACT or VERBOSE
+ diffMaxViolations = 99 // Will fail the build if number of violations, in the diff within from/to, is higher
+ diffPrintViolations = true // Will print violations found in diff
+ gitRepo = file('.') // Where to look for Git
+
  violations = [
   ["FINDBUGS",   ".", ".*/findbugs/.*\\.xml\$",   "Findbugs"],
   ["PMD",        ".", ".*/pmd/.*\\.xml\$",        "PMD"],
