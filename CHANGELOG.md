@@ -3,13 +3,18 @@
 
 Changelog of Violations gradle plugin.
 
-## Unreleased
+## 1.7
 ### No issue
+
+**Bumping version to fix release**
+
+
+[b72605bb653dcac](https://github.com/tomasbjerre/violations-gradle-plugin/commit/b72605bb653dcac) Tomas Bjerre *2017-12-30 14:55:26*
 
 **Ability to check specific changeset**
 
 
-[c7867cb94e511c4](https://github.com/tomasbjerre/violations-gradle-plugin/commit/c7867cb94e511c4) Tomas Bjerre *2017-12-30 14:37:24*
+[e4de20ee2d17bb3](https://github.com/tomasbjerre/violations-gradle-plugin/commit/e4de20ee2d17bb3) Tomas Bjerre *2017-12-30 14:44:42*
 
 **Fix a small typo when violations exceed the maximum.**
 

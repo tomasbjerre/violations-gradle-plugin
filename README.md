@@ -3,7 +3,7 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/se.bjurr.violations/violations-gradle-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/se.bjurr.violations/violations-gradle-plugin)
 [![Bintray](https://api.bintray.com/packages/tomasbjerre/tomasbjerre/se.bjurr.violations%3Aviolations-gradle-plugin/images/download.svg)](https://bintray.com/tomasbjerre/tomasbjerre/se.bjurr.violations%3Aviolations-gradle-plugin/_latestVersion)
 
-This is a Gradle plugin for [Violations Lib](https://github.com/tomasbjerre/violations-lib).
+This is a Gradle plugin for [Violations Lib](https://github.com/tomasbjerre/violations-lib). There is also a [Maven plugin](https://github.com/tomasbjerre/violations-maven-plugin) for this.
 
 It can parse results from static code analysis and:
 
@@ -136,8 +136,17 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
  maxViolations = 99999999 // Will fail the build if total number of found violations is higher
  printViolations = true // Will print violations found in diff
 
- diffFrom = '' // Can be empty (ignored), Git-commit or any Git-reference
- diffTo = '' // Same as above
+ // diff-properties can be supplied with something like:
+ //
+ // ./gradlew violations -i -PdiffFrom=e4de20e -PdiffTo=HEAD
+ //
+ // And in Travis, you could add:
+ //
+ //  script:
+ //   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./gradlew check -PdiffFrom=$TRAVIS_PULL_REQUEST_BRANCH -PdiffTo=$TRAVIS_BRANCH ; fi'
+ //
+ diffFrom = project.properties.diffFrom // Can be empty (ignored), Git-commit or any Git-reference
+ diffTo = project.properties.diffTo // Same as above
  diffMinSeverity = 'INFO' // INFO, WARN or ERROR
  diffDetailLevel = 'VERBOSE' // PER_FILE_COMPACT, COMPACT or VERBOSE
  diffMaxViolations = 99 // Will fail the build if number of violations, in the diff within from/to, is higher
