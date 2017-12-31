@@ -20,5 +20,5 @@ apply from: project.buildscript.classLoader.getResource('gradle-plugin.gradle').
 
 
 dependencies {
- compile 'se.bjurr.violations:violations-git-lib:1.5'
+ compile 'se.bjurr.violations:violations-git-lib:1.6'
 }

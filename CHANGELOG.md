@@ -3,6 +3,20 @@
 
 Changelog of Violations gradle plugin.
 
+## Unreleased
+### No issue
+
+**Relocating to correct Java identifier**
+
+
+[67e9ac0c1c0e37e](https://github.com/tomasbjerre/violations-gradle-plugin/commit/67e9ac0c1c0e37e) Tomas Bjerre *2017-12-30 18:50:22*
+
+**Check pull requests in Travis**
+
+
+[f5985c815180509](https://github.com/tomasbjerre/violations-gradle-plugin/commit/f5985c815180509) Tomas Bjerre *2017-12-30 16:50:33*
+
+
 ## 1.7
 ### No issue
 
