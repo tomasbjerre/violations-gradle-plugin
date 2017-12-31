@@ -10,6 +10,7 @@ buildscript {
  }
 }
 
+apply plugin: "java"
 apply plugin: "se.bjurr.violations.violations-gradle-plugin"
 
 task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
