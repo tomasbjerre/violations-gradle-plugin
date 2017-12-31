@@ -3,8 +3,40 @@
 
 Changelog of Violations gradle plugin.
 
-## Unreleased
+## 1.10
 ### No issue
+
+**Defaulting detail level to VERBOSE**
+
+
+[ca14b7c3fe93baf](https://github.com/tomasbjerre/violations-gradle-plugin/commit/ca14b7c3fe93baf) Tomas Bjerre *2017-12-31 08:26:42*
+
+
+## 1.9
+### GitHub [#6](https://github.com/tomasbjerre/violations-gradle-plugin/issues/6) NPE if diffMaxViolations is not specified
+
+**Default diffMaxViolations to Integer.MAX_VALUE in ViolationsTask.**
+
+ * Fixes . 
+
+[435b551dfccf5de](https://github.com/tomasbjerre/violations-gradle-plugin/commit/435b551dfccf5de) Sam Judd *2017-12-31 07:52:04*
+
+
+### No issue
+
+**Making example project java**
+
+
+[996719efadab4d8](https://github.com/tomasbjerre/violations-gradle-plugin/commit/996719efadab4d8) Tomas Bjerre *2017-12-31 08:12:55*
+
+
+## 1.8
+### No issue
+
+**Un-escape XML when reading attributes**
+
+
+[08087599979aacd](https://github.com/tomasbjerre/violations-gradle-plugin/commit/08087599979aacd) Tomas Bjerre *2017-12-31 06:05:29*
 
 **Relocating to correct Java identifier**
 

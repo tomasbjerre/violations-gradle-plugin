@@ -131,11 +131,20 @@ findbugs {
 }
 
 task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
+ //
+ // Global configuration, remove if you dont want to report violations for
+ // the entire repo.
+ //
  minSeverity = 'INFO' // INFO, WARN or ERROR
  detailLevel = 'VERBOSE' // PER_FILE_COMPACT, COMPACT or VERBOSE
  maxViolations = 99999999 // Will fail the build if total number of found violations is higher
  printViolations = true // Will print violations found in diff
 
+
+ //
+ // Diff configuration, remove if you dont want to report violations for
+ // files changed between specific revisions.
+ //
  // diff-properties can be supplied with something like:
  //
  // ./gradlew violations -i -PdiffFrom=e4de20e -PdiffTo=HEAD
@@ -153,6 +162,11 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
  diffPrintViolations = true // Will print violations found in diff
  gitRepo = file('.') // Where to look for Git
 
+
+ //
+ // This is mandatory regardless of if you want to report violations between
+ // revisions or the entire repo.
+ //
  // Many more formats available, see: https://github.com/tomasbjerre/violations-lib
  violations = [
   ["FINDBUGS",   ".", ".*/findbugs/.*\\.xml\$",   "Findbugs"]

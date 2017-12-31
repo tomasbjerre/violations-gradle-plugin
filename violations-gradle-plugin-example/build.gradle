@@ -6,7 +6,7 @@ buildscript {
  }
 
  dependencies {
-  classpath "se.bjurr.violations:violations-gradle-plugin:1.9-SNAPSHOT"
+  classpath "se.bjurr.violations:violations-gradle-plugin:1.11-SNAPSHOT"
  }
 }
 
@@ -14,11 +14,20 @@ apply plugin: "java"
 apply plugin: "se.bjurr.violations.violations-gradle-plugin"
 
 task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
+ //
+ // Global configuration, remove if you dont want to report violations for
+ // the entire repo.
+ //
  minSeverity = 'INFO' // INFO, WARN or ERROR
  detailLevel = 'VERBOSE' // PER_FILE_COMPACT, COMPACT or VERBOSE
  maxViolations = 99999999 // Will fail the build if total number of found violations is higher
  printViolations = true // Will print violations found in diff
 
+
+ //
+ // Diff configuration, remove if you dont want to report violations for
+ // files changed between specific revisions.
+ //
  // diff-properties can be supplied with something like:
  //
  // ./gradlew violations -i -PdiffFrom=e4de20e -PdiffTo=HEAD
@@ -26,7 +35,7 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
  // And in Travis, you could add:
  //
  //  script:
- //   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./gradlew check -DdiffFrom=$TRAVIS_PULL_REQUEST_BRANCH -DdiffTo=$TRAVIS_BRANCH ; fi'
+ //   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./gradlew check -PdiffFrom=$TRAVIS_PULL_REQUEST_BRANCH -PdiffTo=$TRAVIS_BRANCH ; fi'
  //
  diffFrom = project.properties.diffFrom // Can be empty (ignored), Git-commit or any Git-reference
  diffTo = project.properties.diffTo // Same as above
@@ -36,6 +45,12 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
  diffPrintViolations = true // Will print violations found in diff
  gitRepo = file('.') // Where to look for Git
 
+
+ //
+ // This is mandatory regardless of if you want to report violations between
+ // revisions or the entire repo.
+ //
+ // Many more formats available, see: https://github.com/tomasbjerre/violations-lib
  violations = [
   ["FINDBUGS",   ".", ".*/findbugs/.*\\.xml\$",   "Findbugs"],
   ["PMD",        ".", ".*/pmd/.*\\.xml\$",        "PMD"],
