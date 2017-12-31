@@ -29,7 +29,7 @@ public class ViolationsTask extends DefaultTask {
   private SEVERITY diffMinSeverity = INFO;
   private File gitRepo = new File(".");
   private boolean diffPrintViolations;
-  private Integer diffMaxViolations;
+  private Integer diffMaxViolations = Integer.MAX_VALUE;
   private ViolationsReporterDetailLevel diffDetailLevel;
 
   public void setMinSeverity(final SEVERITY minSeverity) {
