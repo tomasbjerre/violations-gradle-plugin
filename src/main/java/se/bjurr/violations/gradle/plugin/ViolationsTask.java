@@ -2,14 +2,18 @@ package se.bjurr.violations.gradle.plugin;
 
 import static se.bjurr.violations.lib.ViolationsApi.violationsApi;
 import static se.bjurr.violations.lib.ViolationsReporterApi.violationsReporterApi;
+import static se.bjurr.violations.lib.ViolationsReporterDetailLevel.VERBOSE;
 import static se.bjurr.violations.lib.model.SEVERITY.INFO;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
 import javax.script.ScriptException;
+
 import org.gradle.api.DefaultTask;
 import org.gradle.api.tasks.TaskAction;
+
 import se.bjurr.violations.git.ViolationsGit;
 import se.bjurr.violations.lib.ViolationsReporterDetailLevel;
 import se.bjurr.violations.lib.model.SEVERITY;
@@ -21,7 +25,7 @@ public class ViolationsTask extends DefaultTask {
 
   private List<List<String>> violations = new ArrayList<>();
   private SEVERITY minSeverity = INFO;
-  private ViolationsReporterDetailLevel detailLevel;
+  private ViolationsReporterDetailLevel detailLevel = VERBOSE;
   private Integer maxViolations = Integer.MAX_VALUE;
   private boolean printViolations;
   private String diffFrom;
@@ -30,7 +34,7 @@ public class ViolationsTask extends DefaultTask {
   private File gitRepo = new File(".");
   private boolean diffPrintViolations;
   private Integer diffMaxViolations = Integer.MAX_VALUE;
-  private ViolationsReporterDetailLevel diffDetailLevel;
+  private ViolationsReporterDetailLevel diffDetailLevel = VERBOSE;
 
   public void setMinSeverity(final SEVERITY minSeverity) {
     this.minSeverity = minSeverity;
