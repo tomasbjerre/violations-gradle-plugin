@@ -132,6 +132,16 @@ findbugs {
 
 task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
  //
+ // Optional config
+ //
+ maxReporterColumnWidth = 0 // 0 is disabled
+ maxRuleColumnWidth = 10
+ maxSeverityColumnWidth = 0
+ maxLineColumnWidth = 0
+ maxMessageColumnWidth = 50
+
+
+ //
  // Global configuration, remove if you dont want to report violations for
  // the entire repo.
  //

@@ -32,6 +32,11 @@ public class ViolationsTask extends DefaultTask {
   private boolean diffPrintViolations;
   private Integer diffMaxViolations = Integer.MAX_VALUE;
   private ViolationsReporterDetailLevel diffDetailLevel = VERBOSE;
+  private int maxReporterColumnWidth;
+  private int maxRuleColumnWidth = 10;
+  private int maxSeverityColumnWidth;
+  private int maxLineColumnWidth;
+  private int maxMessageColumnWidth = 50;
 
   public void setMinSeverity(final SEVERITY minSeverity) {
     this.minSeverity = minSeverity;
@@ -81,6 +86,26 @@ public class ViolationsTask extends DefaultTask {
     this.printViolations = printViolations;
   }
 
+  public void setMaxLineColumnWidth(final int maxLineColumnWidth) {
+    this.maxLineColumnWidth = maxLineColumnWidth;
+  }
+
+  public void setMaxMessageColumnWidth(final int maxMessageColumnWidth) {
+    this.maxMessageColumnWidth = maxMessageColumnWidth;
+  }
+
+  public void setMaxReporterColumnWidth(final int maxReporterColumnWidth) {
+    this.maxReporterColumnWidth = maxReporterColumnWidth;
+  }
+
+  public void setMaxRuleColumnWidth(final int maxRuleColumnWidth) {
+    this.maxRuleColumnWidth = maxRuleColumnWidth;
+  }
+
+  public void setMaxSeverityColumnWidth(final int maxSeverityColumnWidth) {
+    this.maxSeverityColumnWidth = maxSeverityColumnWidth;
+  }
+
   @TaskAction
   public void gitChangelogPluginTasks() throws Exception {
     final List<Violation> allParsedViolations = new ArrayList<>();
@@ -106,6 +131,11 @@ public class ViolationsTask extends DefaultTask {
     final String report =
         violationsReporterApi() //
             .withViolations(violations) //
+            .withMaxLineColumnWidth(maxLineColumnWidth) //
+            .withMaxMessageColumnWidth(maxMessageColumnWidth) //
+            .withMaxReporterColumnWidth(maxReporterColumnWidth) //
+            .withMaxRuleColumnWidth(maxRuleColumnWidth) //
+            .withMaxSeverityColumnWidth(maxSeverityColumnWidth) //
             .getReport(detailLevel);
 
     if (tooManyViolations) {
@@ -132,6 +162,11 @@ public class ViolationsTask extends DefaultTask {
     final String report =
         violationsReporterApi() //
             .withViolations(violations) //
+            .withMaxLineColumnWidth(maxLineColumnWidth) //
+            .withMaxMessageColumnWidth(maxMessageColumnWidth) //
+            .withMaxReporterColumnWidth(maxReporterColumnWidth) //
+            .withMaxRuleColumnWidth(maxRuleColumnWidth) //
+            .withMaxSeverityColumnWidth(maxSeverityColumnWidth) //
             .getReport(diffDetailLevel);
 
     if (tooManyViolations) {
