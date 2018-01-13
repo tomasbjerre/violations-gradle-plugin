@@ -3,6 +3,24 @@
 
 Changelog of Violations gradle plugin.
 
+## Unreleased
+### No issue
+
+**Doc**
+
+
+[f77d871323a6e99](https://github.com/tomasbjerre/violations-gradle-plugin/commit/f77d871323a6e99) Tomas Bjerre *2018-01-13 19:34:09*
+
+
+## 1.11
+### No issue
+
+**Parameterize max width of reporter table**
+
+
+[eb1ca1700f7d9b5](https://github.com/tomasbjerre/violations-gradle-plugin/commit/eb1ca1700f7d9b5) Tomas Bjerre *2018-01-13 19:28:44*
+
+
 ## 1.10
 ### No issue
 

@@ -13,49 +13,50 @@ It can parse results from static code analysis and:
 A snippet of the output may look like this:
 ```
 ...
-se/bjurr/gitchangelog/internal/settings/Settings.java
-╔══════════╤════════════════╤══════════╤══════╤═════════════════════════════════════════════════════════════════════════════════╗
-║ Reporter │ Rule           │ Severity │ Line │ Message                                                                         ║
-╠══════════╪════════════════╪══════════╪══════╪═════════════════════════════════════════════════════════════════════════════════╣
-║ Findbugs │ EI_EXPOSE_REP2 │ INFO     │ 211  │ May expose internal representation by incorporating reference to mutable object ║
-║          │                │          │      │                                                                                 ║
-║          │                │          │      │                                                                                 ║
-║          │                │          │      │   <p> This code stores a reference to an externally mutable object into the     ║
-║          │                │          │      │   internal representation of the object.&nbsp;                                  ║
-║          │                │          │      │    If instances                                                                 ║
-║          │                │          │      │    are accessed by untrusted code, and unchecked changes to                     ║
-║          │                │          │      │    the mutable object would compromise security or other                        ║
-║          │                │          │      │    important properties, you will need to do something different.               ║
-║          │                │          │      │   Storing a copy of the object is better approach in many situations.</p>       ║
-╚══════════╧════════════════╧══════════╧══════╧═════════════════════════════════════════════════════════════════════════════════╝
+se/bjurr/violations/lib/example/OtherClass.java
+╔══════════╤════════════╤══════════╤══════╤════════════════════════════════════════════════════╗
+║ Reporter │ Rule       │ Severity │ Line │ Message                                            ║
+╠══════════╪════════════╪══════════╪══════╪════════════════════════════════════════════════════╣
+║ Findbugs │ MS_SHOULD_ │ INFO     │ 7    │ Field isn't final but should be                    ║
+║          │ BE_FINAL   │          │      │                                                    ║
+║          │            │          │      │                                                    ║
+║          │            │          │      │    <p>                                             ║
+║          │            │          │      │ This static field public but not final, and        ║
+║          │            │          │      │ could be changed by malicious code or              ║
+║          │            │          │      │         by accident from another package.          ║
+║          │            │          │      │         The field could be made final to avoid     ║
+║          │            │          │      │         this vulnerability.</p>                    ║
+╟──────────┼────────────┼──────────┼──────┼────────────────────────────────────────────────────╢
+║ Findbugs │ NM_FIELD_N │ INFO     │ 6    │ Field names should start with a lower case letter  ║
+║          │ AMING_CONV │          │      │                                                    ║
+║          │ ENTION     │          │      │                                                    ║
+║          │            │          │      │   <p>                                              ║
+║          │            │          │      │ Names of fields that are not final should be in mi ║
+║          │            │          │      │ xed case with a lowercase first letter and the fir ║
+║          │            │          │      │ st letters of subsequent words capitalized.        ║
+║          │            │          │      │ </p>                                               ║
+╚══════════╧════════════╧══════════╧══════╧════════════════════════════════════════════════════╝
 
-Summary of se/bjurr/gitchangelog/internal/settings/Settings.java
+Summary of se/bjurr/violations/lib/example/OtherClass.java
 ╔══════════╤══════╤══════╤═══════╤═══════╗
 ║ Reporter │ INFO │ WARN │ ERROR │ Total ║
 ╠══════════╪══════╪══════╪═══════╪═══════╣
-║ Findbugs │ 1    │ 0    │ 0     │ 1     ║
+║ Findbugs │ 2    │ 0    │ 0     │ 2     ║
 ╟──────────┼──────┼──────┼───────┼───────╢
-║          │ 1    │ 0    │ 0     │ 1     ║
+║          │ 2    │ 0    │ 0     │ 2     ║
 ╚══════════╧══════╧══════╧═══════╧═══════╝
 
 
 Summary
-╔══════════╤══════╤══════╤═══════╤═══════╗
-║ Reporter │ INFO │ WARN │ ERROR │ Total ║
-╠══════════╪══════╪══════╪═══════╪═══════╣
-║ Findbugs │ 27   │ 2    │ 0     │ 29    ║
-╟──────────┼──────┼──────┼───────┼───────╢
-║          │ 27   │ 2    │ 0     │ 29    ║
-╚══════════╧══════╧══════╧═══════╧═══════╝
-
-:violations FAILED
-:violations (Thread[main,5,main]) completed. Took 0.148 secs.
-
-FAILURE: Build failed with an exception.
-
-* What went wrong:
-Execution failed for task ':violations'.
-> javax.script.ScriptException: To many violations found, max is 2 but found 29
+╔════════════╤══════╤══════╤═══════╤═══════╗
+║ Reporter   │ INFO │ WARN │ ERROR │ Total ║
+╠════════════╪══════╪══════╪═══════╪═══════╣
+║ Checkstyle │ 4    │ 1    │ 1     │ 6     ║
+╟────────────┼──────┼──────┼───────┼───────╢
+║ Findbugs   │ 2    │ 2    │ 5     │ 9     ║
+╟────────────┼──────┼──────┼───────┼───────╢
+║            │ 6    │ 3    │ 6     │ 15    ║
+╚════════════╧══════╧══════╧═══════╧═══════╝
 ```
 
 It supports:
