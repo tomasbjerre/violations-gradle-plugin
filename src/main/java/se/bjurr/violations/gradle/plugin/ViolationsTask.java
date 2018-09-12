@@ -1,8 +1,8 @@
 package se.bjurr.violations.gradle.plugin;
 
+import static se.bjurr.violations.git.ViolationsReporterApi.violationsReporterApi;
+import static se.bjurr.violations.git.ViolationsReporterDetailLevel.VERBOSE;
 import static se.bjurr.violations.lib.ViolationsApi.violationsApi;
-import static se.bjurr.violations.lib.ViolationsReporterApi.violationsReporterApi;
-import static se.bjurr.violations.lib.ViolationsReporterDetailLevel.VERBOSE;
 import static se.bjurr.violations.lib.model.SEVERITY.INFO;
 
 import java.io.File;
@@ -12,7 +12,7 @@ import javax.script.ScriptException;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.tasks.TaskAction;
 import se.bjurr.violations.git.ViolationsGit;
-import se.bjurr.violations.lib.ViolationsReporterDetailLevel;
+import se.bjurr.violations.git.ViolationsReporterDetailLevel;
 import se.bjurr.violations.lib.model.SEVERITY;
 import se.bjurr.violations.lib.model.Violation;
 import se.bjurr.violations.lib.reports.Parser;
