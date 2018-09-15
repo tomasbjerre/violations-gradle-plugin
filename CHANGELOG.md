@@ -3,13 +3,55 @@
 
 Changelog of Violations gradle plugin.
 
-## Unreleased
+## 1.15
 ### No issue
+
+**YAMLLint**
+
+
+[f31a11e28399592](https://github.com/tomasbjerre/violations-gradle-plugin/commit/f31a11e28399592) Tomas Bjerre *2018-09-15 07:45:33*
+
+
+## 1.14
+### No issue
+
+**Adding Fliptables dependency**
+
+
+[8ae112acb2cf315](https://github.com/tomasbjerre/violations-gradle-plugin/commit/8ae112acb2cf315) Tomas Bjerre *2018-09-12 20:31:17*
+
+**Updating readme with parsers**
+
+
+[49538fa14acc4db](https://github.com/tomasbjerre/violations-gradle-plugin/commit/49538fa14acc4db) Tomas Bjerre *2018-09-12 17:05:19*
+
+**NullAway**
+
+
+[a0aac05307cc616](https://github.com/tomasbjerre/violations-gradle-plugin/commit/a0aac05307cc616) Tomas Bjerre *2018-04-14 05:50:53*
+
+
+## 1.13
+### No issue
+
+**PCLint**
+
+
+[85b6cfd749f49d1](https://github.com/tomasbjerre/violations-gradle-plugin/commit/85b6cfd749f49d1) Tomas Bjerre *2018-02-13 18:45:53*
+
+
+## 1.12
+### No issue
+
+**Google error-prone**
+
+
+[fd588bee043b0ff](https://github.com/tomasbjerre/violations-gradle-plugin/commit/fd588bee043b0ff) Tomas Bjerre *2018-01-14 11:36:24*
 
 **Doc**
 
 
-[f77d871323a6e99](https://github.com/tomasbjerre/violations-gradle-plugin/commit/f77d871323a6e99) Tomas Bjerre *2018-01-13 19:34:09*
+[a4c8662872a760c](https://github.com/tomasbjerre/violations-gradle-plugin/commit/a4c8662872a760c) Tomas Bjerre *2018-01-14 07:11:09*
 
 
 ## 1.11
