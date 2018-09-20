@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.18
+### No issue
+
+**Correcting Kotlin parsers**
+
+
+[7134d70259f19a3](https://github.com/tomasbjerre/violations-gradle-plugin/commit/7134d70259f19a3) Tomas Bjerre *2018-09-20 23:48:19*
+
+
 ## 1.17
 ### No issue
 
