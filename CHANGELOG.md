@@ -3,6 +3,24 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.17
+### No issue
+
+**Kotlin Maven and Gradle parsers**
+
+
+[11f1274fcf0d538](https://github.com/tomasbjerre/violations-gradle-plugin/commit/11f1274fcf0d538) Tomas Bjerre *2018-09-20 14:05:00*
+
+
+## 1.16
+### No issue
+
+**Fix optional rule in YAMLLint**
+
+
+[c1b95be7450ac89](https://github.com/tomasbjerre/violations-gradle-plugin/commit/c1b95be7450ac89) Tomas Bjerre *2018-09-17 13:20:36*
+
+
 ## 1.15
 ### No issue
 
