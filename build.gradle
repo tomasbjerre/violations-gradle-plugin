@@ -17,8 +17,9 @@ apply from: project.buildscript.classLoader.getResource('java.gradle').toURI()
 apply from: project.buildscript.classLoader.getResource('changelog.gradle').toURI()
 apply from: project.buildscript.classLoader.getResource('release.gradle').toURI()
 apply from: project.buildscript.classLoader.getResource('gradle-plugin.gradle').toURI()
+apply from: project.buildscript.classLoader.getResource('violations.gradle').toURI()
 
 
 dependencies {
- compile 'se.bjurr.violations:violations-git-lib:1.14'
+ compile 'se.bjurr.violations:violations-git-lib:1.15'
 }

@@ -3,6 +3,20 @@
 
 Changelog of Violations gradle plugin.
 
+## Unreleased
+### No issue
+
+**Doc**
+
+
+[7fa4d5de1969b2a](https://github.com/tomasbjerre/violations-gradle-plugin/commit/7fa4d5de1969b2a) Tomas Bjerre *2018-09-22 18:26:43*
+
+**Documenting parsers as a table**
+
+
+[80dcd3b6f418132](https://github.com/tomasbjerre/violations-gradle-plugin/commit/80dcd3b6f418132) Tomas Bjerre *2018-09-22 08:42:08*
+
+
 ## 1.18
 ### No issue
 
