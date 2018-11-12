@@ -127,7 +127,7 @@ There is a running example [here](https://github.com/tomasbjerre/violations-grad
 
 Having the following in the build script will make the plugin run with `./gradlew build -i`.
 
-```
+```gradle
 buildscript {
  repositories {
   maven { url 'https://plugins.gradle.org/m2/' }
