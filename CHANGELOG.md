@@ -3,8 +3,30 @@
 
 Changelog of Violations gradle plugin.
 
-## Unreleased
+## 1.20
 ### No issue
+
+**Setting version to fix faulty release**
+
+
+[d73925de42deb20](https://github.com/tomasbjerre/violations-gradle-plugin/commit/d73925de42deb20) Tomas Bjerre *2019-01-09 19:11:43*
+
+**Making CodeNarc respect source directory**
+
+
+[74f41c8d9973998](https://github.com/tomasbjerre/violations-gradle-plugin/commit/74f41c8d9973998) Tomas Bjerre *2019-01-09 19:00:07*
+
+**README.md: Improve Markdown**
+
+ * This makes it render with syntax highlighting, which makes it more readable. 
+ * (I would _like_ to fix the indentation also; 1-character tabs is far too little IMHO, 4 would make more sense. But, don&#39;t want to do that without discussing with you first, since I think you prefer it this way?) 
+
+[4ec85641427edd6](https://github.com/tomasbjerre/violations-gradle-plugin/commit/4ec85641427edd6) Per Lundberg *2018-11-12 07:03:14*
+
+**Automating reporters in readme**
+
+
+[a7f939e1f95e913](https://github.com/tomasbjerre/violations-gradle-plugin/commit/a7f939e1f95e913) Tomas Bjerre *2018-09-23 12:26:27*
 
 **Doc**
 
@@ -114,7 +136,7 @@ Changelog of Violations gradle plugin.
 
 
 ## 1.9
-### GitHub [#6](https://github.com/tomasbjerre/violations-gradle-plugin/issues/6) NPE if diffMaxViolations is not specified
+### GitHub [#6](https://github.com/tomasbjerre/violations-gradle-plugin/issues/6) NPE if diffMaxViolations is not specified  
 
 **Default diffMaxViolations to Integer.MAX_VALUE in ViolationsTask.**
 
@@ -170,7 +192,7 @@ Changelog of Violations gradle plugin.
 
 
 ## 1.3
-### GitHub [#1](https://github.com/tomasbjerre/violations-gradle-plugin/issues/1) No output on v1.2 with findbugs
+### GitHub [#1](https://github.com/tomasbjerre/violations-gradle-plugin/issues/1) No output on v1.2 with findbugs    *enhancement*  
 
 **Always print the full report if more than the max violations are found.**
 
