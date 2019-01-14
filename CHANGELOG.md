@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.21
+### No issue
+
+**Avoiding faulty slash with CodeNarc**
+
+
+[e24b1e9ea92f81f](https://github.com/tomasbjerre/violations-gradle-plugin/commit/e24b1e9ea92f81f) Tomas Bjerre *2019-01-14 17:25:20*
+
+
 ## 1.20
 ### No issue
 
