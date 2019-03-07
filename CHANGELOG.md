@@ -3,6 +3,29 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.23
+### GitHub [#11](https://github.com/tomasbjerre/violations-gradle-plugin/issues/11) Disabling columns in the output  
+
+**Update README.md**
+
+ * Quick documentation fix while we are waiting on  to be resolved. This should make it slightly more obvious how things work. 
+
+[a70892c5fd4ed6c](https://github.com/tomasbjerre/violations-gradle-plugin/commit/a70892c5fd4ed6c) Per Lundberg *2019-01-22 13:14:04*
+
+
+### No issue
+
+**bump**
+
+
+[65327cad8700c01](https://github.com/tomasbjerre/violations-gradle-plugin/commit/65327cad8700c01) Tomas Bjerre *2019-03-07 15:40:06*
+
+**golangci-lint**
+
+
+[b9c5c655ad4af4a](https://github.com/tomasbjerre/violations-gradle-plugin/commit/b9c5c655ad4af4a) Tomas Bjerre *2019-03-07 15:37:13*
+
+
 ## 1.21
 ### No issue
 
