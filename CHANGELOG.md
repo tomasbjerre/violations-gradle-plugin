@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.24
+### No issue
+
+**Klocwork line numbers**
+
+
+[8548b9ccc541739](https://github.com/tomasbjerre/violations-gradle-plugin/commit/8548b9ccc541739) Tomas Bjerre *2019-03-13 19:10:43*
+
+
 ## 1.23
 ### GitHub [#11](https://github.com/tomasbjerre/violations-gradle-plugin/issues/11) Disabling columns in the output  
 
