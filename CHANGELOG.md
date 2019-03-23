@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.25
+### No issue
+
+**Sonar Report**
+
+
+[56228f8fd130afe](https://github.com/tomasbjerre/violations-gradle-plugin/commit/56228f8fd130afe) Tomas Bjerre *2019-03-23 15:00:55*
+
+
 ## 1.24
 ### No issue
 
