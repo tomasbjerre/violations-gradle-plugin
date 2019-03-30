@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.26
+### No issue
+
+**Correcting Sonar severity**
+
+
+[96c95bb9eb35e7f](https://github.com/tomasbjerre/violations-gradle-plugin/commit/96c95bb9eb35e7f) Tomas Bjerre *2019-03-30 19:57:22*
+
+
 ## 1.25
 ### No issue
 
