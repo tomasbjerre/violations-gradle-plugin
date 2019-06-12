@@ -1,7 +1,8 @@
 sudo: false
 language: java
 jdk:
-  - oraclejdk8
+  - openjdk8
+  - openjdk11
 script:
   - ./build.sh
   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then cd violations-gradle-plugin-example && bash ./gradlew check -PdiffFrom=$TRAVIS_PULL_REQUEST_BRANCH -PdiffTo=$TRAVIS_BRANCH ; fi'
