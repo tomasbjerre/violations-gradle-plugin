@@ -10,6 +10,8 @@ It can parse results from static code analysis and:
  * Report violations in the build log.
  * Optionally fail the build depending on violations found.
 
+You can also do this with a [command line tool](https://www.npmjs.com/package/violations-command-line).
+
 A snippet of the output may look like this:
 ```
 ...
