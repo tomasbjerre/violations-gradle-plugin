@@ -3,8 +3,13 @@
 
 Changelog of Violations gradle plugin.
 
-## Unreleased
+## 1.27
 ### No issue
+
+**Changing name of JSHINT parser to JSLINT**
+
+
+[9f32f8e25fa3ff2](https://github.com/tomasbjerre/violations-gradle-plugin/commit/9f32f8e25fa3ff2) Tomas Bjerre *2019-08-03 12:15:16*
 
 **doc**
 
