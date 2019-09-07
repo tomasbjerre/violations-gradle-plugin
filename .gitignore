@@ -11,3 +11,6 @@ temp
 couscous.phar
 .okhttpcache
 .idea
+violations-gradle-plugin-example/code-climate-file.json
+violations-gradle-plugin-example/violations-file.json
+
