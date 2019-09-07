@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.28
+### No issue
+
+**CodeClimate export**
+
+
+[85d905dfef487b3](https://github.com/tomasbjerre/violations-gradle-plugin/commit/85d905dfef487b3) Tomas Bjerre *2019-09-07 14:53:24*
+
+
 ## 1.27
 ### No issue
 
