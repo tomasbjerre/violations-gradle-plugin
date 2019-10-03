@@ -3,8 +3,13 @@
 
 Changelog of Violations gradle plugin.
 
-## Unreleased
+## 1.29
 ### No issue
+
+**Printing on lifecycle level to avoid need for -i**
+
+
+[91d289d3183e154](https://github.com/tomasbjerre/violations-gradle-plugin/commit/91d289d3183e154) Tomas Bjerre *2019-10-03 16:34:30*
 
 **doc**
 
