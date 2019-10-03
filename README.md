@@ -137,7 +137,7 @@ Missing a format? Open an issue [here](https://github.com/tomasbjerre/violations
 ## Usage ##
 There is a running example [here](https://github.com/tomasbjerre/violations-gradle-plugin/tree/master/violations-gradle-plugin-example).
 
-Having the following in the build script will make the plugin run with `./gradlew build -i`.
+Having the following in the build script will make the plugin run with `./gradlew build`.
 
 ```gradle
 buildscript {
@@ -189,7 +189,7 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
  //
  // diff-properties can be supplied with something like:
  //
- // ./gradlew violations -i -PdiffFrom=e4de20e -PdiffTo=HEAD
+ // ./gradlew violations -PdiffFrom=e4de20e -PdiffTo=HEAD
  //
  // And in Travis, you could add:
  //

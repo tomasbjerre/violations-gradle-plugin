@@ -125,7 +125,7 @@ public class ViolationsTask extends DefaultTask {
   }
 
   @TaskAction
-  public void gitChangelogPluginTasks() throws Exception {
+  public void violationsPluginTasks() throws Exception {
     final List<Violation> allParsedViolations = new ArrayList<>();
     final List<Violation> allParsedViolationsInDiff = new ArrayList<>();
     for (final List<String> configuredViolation : violations) {
@@ -173,16 +173,12 @@ public class ViolationsTask extends DefaultTask {
             .getReport(detailLevel);
 
     if (tooManyViolations) {
+      getLogger().error("\nViolations:\n\n" + report);
       throw new ScriptException(
-          "Too many violations found, max is "
-              + maxViolations
-              + " but found "
-              + violations.size()
-              + "\n"
-              + report);
+          "Too many violations found, max is " + maxViolations + " but found " + violations.size());
     } else {
       if (printViolations) {
-        getLogger().info("\nViolations in repo\n\n" + report);
+        getLogger().lifecycle("\nViolations in repo\n\n" + report);
       }
     }
   }
@@ -204,16 +200,15 @@ public class ViolationsTask extends DefaultTask {
             .getReport(diffDetailLevel);
 
     if (tooManyViolations) {
+      getLogger().error("\nViolations:\n\n" + report);
       throw new ScriptException(
           "Too many violations found in diff, max is "
               + diffMaxViolations
               + " but found "
-              + violations.size()
-              + "\n"
-              + report);
+              + violations.size());
     } else {
       if (diffPrintViolations) {
-        getLogger().info("\nViolations in diff\n\n" + report);
+        getLogger().lifecycle("\nViolations in diff\n\n" + report);
       }
     }
   }
@@ -240,11 +235,16 @@ public class ViolationsTask extends DefaultTask {
   private List<Violation> getAllParsedViolations(final List<String> configuredViolation) {
     final String reporter = configuredViolation.size() >= 4 ? configuredViolation.get(3) : null;
 
+    final String scanFolder = configuredViolation.get(1);
+    final Parser parser = Parser.valueOf(configuredViolation.get(0));
+    final String pattern = configuredViolation.get(2);
+    getLogger()
+        .lifecycle("Looking for " + parser + " with pattern " + pattern + " in " + scanFolder);
     final List<Violation> parsedViolations =
         violationsApi() //
-            .findAll(Parser.valueOf(configuredViolation.get(0))) //
-            .inFolder(configuredViolation.get(1)) //
-            .withPattern(configuredViolation.get(2)) //
+            .findAll(parser) //
+            .inFolder(scanFolder) //
+            .withPattern(pattern) //
             .withReporter(reporter) //
             .violations();
     return parsedViolations;

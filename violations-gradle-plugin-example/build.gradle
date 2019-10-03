@@ -63,10 +63,10 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
  //
  // Many more formats available, see: https://github.com/tomasbjerre/violations-lib
  violations = [
-  ["FINDBUGS",   ".", ".*/findbugs/.*\\.xml\$",   "Findbugs"],
-  ["PMD",        ".", ".*/pmd/.*\\.xml\$",        "PMD"],
-  ["CHECKSTYLE", ".", ".*/checkstyle/.*\\.xml\$", "Checkstyle"],
-  ["JSLINT",     ".", ".*/jshint/.*\\.xml\$",     "JSHint"],
-  ["CSSLINT",    ".", ".*/csslint/.*\\.xml\$",    "CssLint"]
+  ["FINDBUGS",   projectDir.path, ".*/findbugs/.*\\.xml\$",   "Findbugs"],
+  ["PMD",        projectDir.path, ".*/pmd/.*\\.xml\$",        "PMD"],
+  ["CHECKSTYLE", projectDir.path, ".*/checkstyle/.*\\.xml\$", "Checkstyle"],
+  ["JSLINT",     projectDir.path, ".*/jshint/.*\\.xml\$",     "JSHint"],
+  ["CSSLINT",    projectDir.path, ".*/csslint/.*\\.xml\$",    "CssLint"]
  ]
 }
