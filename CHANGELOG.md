@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.30
+### No issue
+
+**Using ASCII chars in tables**
+
+
+[d1ccfc9d984bcfc](https://github.com/tomasbjerre/violations-gradle-plugin/commit/d1ccfc9d984bcfc) Tomas Bjerre *2019-10-03 18:13:23*
+
+
 ## 1.29
 ### No issue
 
