@@ -211,7 +211,7 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
  //
  // Many more formats available, see: https://github.com/tomasbjerre/violations-lib
  violations = [
-  ["FINDBUGS",   ".", ".*/findbugs/.*\\.xml\$",   "Findbugs"]
+  ["FINDBUGS", buildDir.path, ".*/findbugs/.*\\.xml\$", "Findbugs"]
  ]
 }
 
