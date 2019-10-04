@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.31
+### No issue
+
+**Always front slashes when searching FS**
+
+
+[469f9ede9a1be67](https://github.com/tomasbjerre/violations-gradle-plugin/commit/469f9ede9a1be67) Tomas Bjerre *2019-10-04 14:52:32*
+
+
 ## 1.30
 ### No issue
 
