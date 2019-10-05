@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.32
+### No issue
+
+**More logging**
+
+
+[b886bdafaf6dc0b](https://github.com/tomasbjerre/violations-gradle-plugin/commit/b886bdafaf6dc0b) Tomas Bjerre *2019-10-05 06:27:35*
+
+
 ## 1.31
 ### No issue
 
