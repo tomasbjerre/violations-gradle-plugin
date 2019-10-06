@@ -133,7 +133,11 @@ public class ViolationsTask extends DefaultTask {
 
       allParsedViolations.addAll(getFiltered(parsedViolations, minSeverity));
 
-      allParsedViolationsInDiff.addAll(getAllViolationsInDiff(parsedViolations));
+      if (shouldCheckDiff()) {
+        allParsedViolationsInDiff.addAll(getAllViolationsInDiff(parsedViolations));
+      } else {
+        getLogger().info("No references specified, will not report violations in diff");
+      }
     }
 
     if (this.codeClimateFile != null) {
@@ -143,7 +147,10 @@ public class ViolationsTask extends DefaultTask {
       createJsonFile(allParsedViolations, this.violationsFile);
     }
     checkGlobalViolations(allParsedViolations);
-    checkDiffViolations(allParsedViolationsInDiff);
+
+    if (shouldCheckDiff()) {
+      checkDiffViolations(allParsedViolationsInDiff);
+    }
   }
 
   private void createJsonFile(final Object object, final File file) throws IOException {
@@ -215,14 +222,9 @@ public class ViolationsTask extends DefaultTask {
 
   private List<Violation> getAllViolationsInDiff(final List<Violation> unfilteredViolations)
       throws Exception {
-    if (!isDefined(diffFrom) || !isDefined(diffTo)) {
-      getLogger().info("No references specified, will not report violations in diff");
-      return new ArrayList<>();
-    } else {
-      final List<Violation> candidates = getFiltered(unfilteredViolations, diffMinSeverity);
-      return new ViolationsGit(candidates) //
-          .getViolationsInChangeset(gitRepo, diffFrom, diffTo);
-    }
+    final List<Violation> candidates = getFiltered(unfilteredViolations, diffMinSeverity);
+    return new ViolationsGit(candidates) //
+        .getViolationsInChangeset(gitRepo, diffFrom, diffTo);
   }
 
   private List<Violation> getFiltered(final List<Violation> unfiltered, final SEVERITY filter) {
@@ -230,6 +232,10 @@ public class ViolationsTask extends DefaultTask {
       return Filtering.withAtLEastSeverity(unfiltered, filter);
     }
     return unfiltered;
+  }
+
+  private boolean shouldCheckDiff() {
+    return isDefined(diffFrom) && isDefined(diffTo);
   }
 
   private List<Violation> getAllParsedViolations(final List<String> configuredViolation) {
