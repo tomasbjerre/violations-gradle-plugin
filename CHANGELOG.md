@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.33
+### No issue
+
+**Avoiding checking diff if not needed**
+
+
+[1f36e67f9635976](https://github.com/tomasbjerre/violations-gradle-plugin/commit/1f36e67f9635976) Tomas Bjerre *2019-10-06 16:35:54*
+
+
 ## 1.32
 ### No issue
 
