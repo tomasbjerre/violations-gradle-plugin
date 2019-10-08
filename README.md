@@ -166,7 +166,7 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
  // Optional config
  //
  maxReporterColumnWidth = 0 // 0 means "no limit"
- maxRuleColumnWidth = 10
+ maxRuleColumnWidth = 60
  maxSeverityColumnWidth = 0
  maxLineColumnWidth = 0
  maxMessageColumnWidth = 50
