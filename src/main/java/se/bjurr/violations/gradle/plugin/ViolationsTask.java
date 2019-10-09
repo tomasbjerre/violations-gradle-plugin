@@ -41,10 +41,10 @@ public class ViolationsTask extends DefaultTask {
   private Integer diffMaxViolations = Integer.MAX_VALUE;
   private ViolationsReporterDetailLevel diffDetailLevel = VERBOSE;
   private int maxReporterColumnWidth;
-  private int maxRuleColumnWidth = 10;
+  private int maxRuleColumnWidth;
   private int maxSeverityColumnWidth;
   private int maxLineColumnWidth;
-  private int maxMessageColumnWidth = 50;
+  private int maxMessageColumnWidth = 30;
   private File codeClimateFile;
   private File violationsFile;
 
