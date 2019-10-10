@@ -3,6 +3,35 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.36
+### No issue
+
+**Corrections in Pydocstyle**
+
+
+[a6d7e3796202837](https://github.com/tomasbjerre/violations-gradle-plugin/commit/a6d7e3796202837) Tomas Bjerre *2019-10-10 16:03:27*
+
+**1.36-SNAPSHOT**
+
+
+[a1819a103e2cb85](https://github.com/tomasbjerre/violations-gradle-plugin/commit/a1819a103e2cb85) Tomas Bjerre *2019-10-09 16:35:52*
+
+**maxMessageColumnWidth = 30**
+
+
+[fe47ec6b988960b](https://github.com/tomasbjerre/violations-gradle-plugin/commit/fe47ec6b988960b) Tomas Bjerre *2019-10-09 16:27:29*
+
+**1.35-SNAPSHOT**
+
+
+[01133ad71ceee35](https://github.com/tomasbjerre/violations-gradle-plugin/commit/01133ad71ceee35) Tomas Bjerre *2019-10-08 19:47:37*
+
+**Using column widths as min 0 and max given**
+
+
+[3cad5697a2bb1f4](https://github.com/tomasbjerre/violations-gradle-plugin/commit/3cad5697a2bb1f4) Tomas Bjerre *2019-10-08 17:58:48*
+
+
 ## 1.33
 ### No issue
 
