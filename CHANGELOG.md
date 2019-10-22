@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.37
+### GitHub #79   
+
+**Protolint tomasbjerre/violations-lib**
+
+
+[389e273aa91a5fb](https://github.com/tomasbjerre/violations-gradle-plugin/commit/389e273aa91a5fb) Tomas Bjerre *2019-10-22 03:44:51*
+
+
 ## 1.36
 ### No issue
 
