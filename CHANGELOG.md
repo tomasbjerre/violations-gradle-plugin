@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.38
+### GitHub #80   
+
+**Add support for sonar issue report formats >= v7.5 tomasbjerre/violations-lib**
+
+
+[c87ad313e28001a](https://github.com/tomasbjerre/violations-gradle-plugin/commit/c87ad313e28001a) Tomas Bjerre *2020-01-03 06:59:30*
+
+
 ## 1.37
 ### GitHub #79   
 
