@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.39
+### No issue
+
+**Filtering out duplicated violations**
+
+
+[a8575053c368da6](https://github.com/tomasbjerre/violations-gradle-plugin/commit/a8575053c368da6) Tomas Bjerre *2020-01-19 16:02:16*
+
+
 ## 1.38
 ### GitHub #80   
 
