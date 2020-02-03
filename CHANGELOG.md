@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.40
+### GitHub #82   
+
+**CPPCheckParser with auto closed <error/> tags tomasbjerre/violations-lib**
+
+
+[5060507cf405f4a](https://github.com/tomasbjerre/violations-gradle-plugin/commit/5060507cf405f4a) Tomas Bjerre *2020-02-03 16:57:08*
+
+
 ## 1.39
 ### No issue
 
@@ -170,7 +179,7 @@ Changelog of Violations gradle plugin.
 
 
 ## 1.23
-### GitHub [#11](https://github.com/tomasbjerre/violations-gradle-plugin/issues/11) Disabling columns in the output  
+### GitHub #11   
 
 **Update README.md**
 
@@ -334,7 +343,7 @@ Changelog of Violations gradle plugin.
 
 
 ## 1.9
-### GitHub [#6](https://github.com/tomasbjerre/violations-gradle-plugin/issues/6) NPE if diffMaxViolations is not specified  
+### GitHub #6   
 
 **Default diffMaxViolations to Integer.MAX_VALUE in ViolationsTask.**
 
@@ -390,7 +399,7 @@ Changelog of Violations gradle plugin.
 
 
 ## 1.3
-### GitHub [#1](https://github.com/tomasbjerre/violations-gradle-plugin/issues/1) No output on v1.2 with findbugs    *enhancement*  
+### GitHub #1   
 
 **Always print the full report if more than the max violations are found.**
 
