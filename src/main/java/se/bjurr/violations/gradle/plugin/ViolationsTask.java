@@ -15,11 +15,16 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.TreeSet;
+import java.util.logging.Level;
 import javax.script.ScriptException;
 import org.gradle.api.DefaultTask;
+import org.gradle.api.logging.LogLevel;
 import org.gradle.api.tasks.TaskAction;
 import se.bjurr.violations.git.ViolationsGit;
 import se.bjurr.violations.git.ViolationsReporterDetailLevel;
+import se.bjurr.violations.lib.ViolationsLogger;
 import se.bjurr.violations.lib.model.SEVERITY;
 import se.bjurr.violations.lib.model.Violation;
 import se.bjurr.violations.lib.reports.Parser;
@@ -47,6 +52,7 @@ public class ViolationsTask extends DefaultTask {
   private int maxMessageColumnWidth = 30;
   private File codeClimateFile;
   private File violationsFile;
+  private ViolationsLogger violationsLogger;
 
   public void setCodeClimateFile(final File codeClimateFile) {
     this.codeClimateFile = codeClimateFile;
@@ -126,30 +132,55 @@ public class ViolationsTask extends DefaultTask {
 
   @TaskAction
   public void violationsPluginTasks() throws Exception {
-    final List<Violation> allParsedViolations = new ArrayList<>();
-    final List<Violation> allParsedViolationsInDiff = new ArrayList<>();
-    for (final List<String> configuredViolation : violations) {
-      final List<Violation> parsedViolations = getAllParsedViolations(configuredViolation);
+    this.violationsLogger =
+        new ViolationsLogger() {
+          private LogLevel toGradleLogLevel(final Level level) {
+            LogLevel gradleLevel = LogLevel.INFO;
+            if (level == Level.FINE) {
+              gradleLevel = LogLevel.DEBUG;
+            } else if (level == Level.SEVERE) {
+              gradleLevel = LogLevel.ERROR;
+            } else if (level == Level.WARNING) {
+              gradleLevel = LogLevel.WARN;
+            }
+            return gradleLevel;
+          }
 
-      allParsedViolations.addAll(getFiltered(parsedViolations, minSeverity));
+          @Override
+          public void log(final Level level, final String string) {
+            ViolationsTask.this.getLogger().log(this.toGradleLogLevel(level), string);
+          }
 
-      if (shouldCheckDiff()) {
-        allParsedViolationsInDiff.addAll(getAllViolationsInDiff(parsedViolations));
+          @Override
+          public void log(final Level level, final String string, final Throwable t) {
+            ViolationsTask.this.getLogger().log(this.toGradleLogLevel(level), string, t);
+          }
+        };
+
+    final Set<Violation> allParsedViolations = new TreeSet<>();
+    final Set<Violation> allParsedViolationsInDiff = new TreeSet<>();
+    for (final List<String> configuredViolation : this.violations) {
+      final Set<Violation> parsedViolations = this.getAllParsedViolations(configuredViolation);
+
+      allParsedViolations.addAll(this.getFiltered(parsedViolations, this.minSeverity));
+
+      if (this.shouldCheckDiff()) {
+        allParsedViolationsInDiff.addAll(this.getAllViolationsInDiff(parsedViolations));
       } else {
-        getLogger().info("No references specified, will not report violations in diff");
+        this.getLogger().info("No references specified, will not report violations in diff");
       }
     }
 
     if (this.codeClimateFile != null) {
-      createJsonFile(fromViolations(allParsedViolations), this.codeClimateFile);
+      this.createJsonFile(fromViolations(allParsedViolations), this.codeClimateFile);
     }
     if (this.violationsFile != null) {
-      createJsonFile(allParsedViolations, this.violationsFile);
+      this.createJsonFile(allParsedViolations, this.violationsFile);
     }
-    checkGlobalViolations(allParsedViolations);
+    this.checkGlobalViolations(allParsedViolations);
 
-    if (shouldCheckDiff()) {
-      checkDiffViolations(allParsedViolationsInDiff);
+    if (this.shouldCheckDiff()) {
+      this.checkDiffViolations(allParsedViolationsInDiff);
     }
   }
 
@@ -163,71 +194,76 @@ public class ViolationsTask extends DefaultTask {
         WRITE);
   }
 
-  private void checkGlobalViolations(final List<Violation> violations) throws ScriptException {
-    final boolean tooManyViolations = violations.size() > maxViolations;
-    if (!tooManyViolations && !printViolations) {
+  private void checkGlobalViolations(final Set<Violation> violations) throws ScriptException {
+    final boolean tooManyViolations = violations.size() > this.maxViolations;
+    if (!tooManyViolations && !this.printViolations) {
       return;
     }
 
     final String report =
         violationsReporterApi() //
             .withViolations(violations) //
-            .withMaxLineColumnWidth(maxLineColumnWidth) //
-            .withMaxMessageColumnWidth(maxMessageColumnWidth) //
-            .withMaxReporterColumnWidth(maxReporterColumnWidth) //
-            .withMaxRuleColumnWidth(maxRuleColumnWidth) //
-            .withMaxSeverityColumnWidth(maxSeverityColumnWidth) //
-            .getReport(detailLevel);
+            .withMaxLineColumnWidth(this.maxLineColumnWidth) //
+            .withMaxMessageColumnWidth(this.maxMessageColumnWidth) //
+            .withMaxReporterColumnWidth(this.maxReporterColumnWidth) //
+            .withMaxRuleColumnWidth(this.maxRuleColumnWidth) //
+            .withMaxSeverityColumnWidth(this.maxSeverityColumnWidth) //
+            .getReport(this.detailLevel);
 
     if (tooManyViolations) {
-      getLogger().error("\nViolations:\n\n" + report);
+      this.getLogger().error("\nViolations:\n\n" + report);
       throw new ScriptException(
-          "Too many violations found, max is " + maxViolations + " but found " + violations.size());
+          "Too many violations found, max is "
+              + this.maxViolations
+              + " but found "
+              + violations.size()
+              + ". You can adjust this with the 'maxViolations' configuration parameter.");
     } else {
-      if (printViolations) {
-        getLogger().lifecycle("\nViolations in repo\n\n" + report);
+      if (this.printViolations) {
+        this.getLogger().lifecycle("\nViolations in repo\n\n" + report);
       }
     }
   }
 
-  private void checkDiffViolations(final List<Violation> violations) throws ScriptException {
-    final boolean tooManyViolations = violations.size() > diffMaxViolations;
-    if (!tooManyViolations && !diffPrintViolations) {
+  private void checkDiffViolations(final Set<Violation> violations) throws ScriptException {
+    final boolean tooManyViolations = violations.size() > this.diffMaxViolations;
+    if (!tooManyViolations && !this.diffPrintViolations) {
       return;
     }
 
     final String report =
         violationsReporterApi() //
             .withViolations(violations) //
-            .withMaxLineColumnWidth(maxLineColumnWidth) //
-            .withMaxMessageColumnWidth(maxMessageColumnWidth) //
-            .withMaxReporterColumnWidth(maxReporterColumnWidth) //
-            .withMaxRuleColumnWidth(maxRuleColumnWidth) //
-            .withMaxSeverityColumnWidth(maxSeverityColumnWidth) //
-            .getReport(diffDetailLevel);
+            .withMaxLineColumnWidth(this.maxLineColumnWidth) //
+            .withMaxMessageColumnWidth(this.maxMessageColumnWidth) //
+            .withMaxReporterColumnWidth(this.maxReporterColumnWidth) //
+            .withMaxRuleColumnWidth(this.maxRuleColumnWidth) //
+            .withMaxSeverityColumnWidth(this.maxSeverityColumnWidth) //
+            .getReport(this.diffDetailLevel);
 
     if (tooManyViolations) {
-      getLogger().error("\nViolations:\n\n" + report);
+      this.getLogger().error("\nViolations:\n\n" + report);
       throw new ScriptException(
           "Too many violations found in diff, max is "
-              + diffMaxViolations
+              + this.diffMaxViolations
               + " but found "
-              + violations.size());
+              + violations.size()
+              + ". You can adjust this with the 'maxViolations' configuration parameter.");
     } else {
-      if (diffPrintViolations) {
-        getLogger().lifecycle("\nViolations in diff\n\n" + report);
+      if (this.diffPrintViolations) {
+        this.getLogger().lifecycle("\nViolations in diff\n\n" + report);
       }
     }
   }
 
-  private List<Violation> getAllViolationsInDiff(final List<Violation> unfilteredViolations)
+  private Set<Violation> getAllViolationsInDiff(final Set<Violation> unfilteredViolations)
       throws Exception {
-    final List<Violation> candidates = getFiltered(unfilteredViolations, diffMinSeverity);
+    final Set<Violation> candidates = this.getFiltered(unfilteredViolations, this.diffMinSeverity);
     return new ViolationsGit(candidates) //
-        .getViolationsInChangeset(gitRepo, diffFrom, diffTo);
+        .getViolationsInChangeset(this.gitRepo, this.diffFrom, this.diffTo);
   }
 
-  private List<Violation> getFiltered(final List<Violation> unfiltered, final SEVERITY filter) {
+  private Set<Violation> getFiltered(final Set<Violation> unfiltered, final SEVERITY filter) {
     if (filter != null) {
       return Filtering.withAtLEastSeverity(unfiltered, filter);
     }
@@ -235,19 +271,18 @@ public class ViolationsTask extends DefaultTask {
   }
 
   private boolean shouldCheckDiff() {
-    return isDefined(diffFrom) && isDefined(diffTo);
+    return this.isDefined(this.diffFrom) && this.isDefined(this.diffTo);
   }
 
-  private List<Violation> getAllParsedViolations(final List<String> configuredViolation) {
+  private Set<Violation> getAllParsedViolations(final List<String> configuredViolation) {
     final String reporter = configuredViolation.size() >= 4 ? configuredViolation.get(3) : null;
 
     final String scanFolder = configuredViolation.get(1);
     final Parser parser = Parser.valueOf(configuredViolation.get(0));
     final String pattern = configuredViolation.get(2);
-    getLogger()
-        .lifecycle("Looking for " + parser + " with pattern " + pattern + " in " + scanFolder);
-    final List<Violation> parsedViolations =
+    final Set<Violation> parsedViolations =
         violationsApi() //
+            .withViolationsLogger(this.violationsLogger) //
             .findAll(parser) //
             .inFolder(scanFolder) //
             .withPattern(pattern) //
