@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.41
+### No issue
+
+**New: custom logging in violations-lib**
+
+
+[aecd2effd1c56a5](https://github.com/tomasbjerre/violations-gradle-plugin/commit/aecd2effd1c56a5) Tomas Bjerre *2020-07-05 15:02:02*
+
+
 ## 1.40
 ### GitHub #82   
 
@@ -179,7 +188,7 @@ Changelog of Violations gradle plugin.
 
 
 ## 1.23
-### GitHub #11   
+### GitHub [#11](https://github.com/tomasbjerre/violations-gradle-plugin/issues/11) Disabling columns in the output  
 
 **Update README.md**
 
@@ -343,7 +352,7 @@ Changelog of Violations gradle plugin.
 
 
 ## 1.9
-### GitHub #6   
+### GitHub [#6](https://github.com/tomasbjerre/violations-gradle-plugin/issues/6) NPE if diffMaxViolations is not specified  
 
 **Default diffMaxViolations to Integer.MAX_VALUE in ViolationsTask.**
 
@@ -399,7 +408,7 @@ Changelog of Violations gradle plugin.
 
 
 ## 1.3
-### GitHub #1   
+### GitHub [#1](https://github.com/tomasbjerre/violations-gradle-plugin/issues/1) No output on v1.2 with findbugs    *enhancement*  
 
 **Always print the full report if more than the max violations are found.**
 
