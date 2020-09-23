@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.43
+### No issue
+
+**Allow Checkstyle reports with no line**
+
+
+[efe0e0b1567f22b](https://github.com/tomasbjerre/violations-gradle-plugin/commit/efe0e0b1567f22b) Tomas Bjerre *2020-09-23 16:39:40*
+
+
 ## 1.42
 ### No issue
 
