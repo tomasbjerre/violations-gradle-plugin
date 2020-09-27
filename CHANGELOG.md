@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.45
+### No issue
+
+**Find Security Bugs messages**
+
+
+[964c349f53f2053](https://github.com/tomasbjerre/violations-gradle-plugin/commit/964c349f53f2053) Tomas Bjerre *2020-09-27 16:20:23*
+
+
 ## 1.43
 ### No issue
 
