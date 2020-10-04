@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.46
+### GitHub #112   
+
+**check_name and engine_name in CodeClimate**
+
+
+[d0f27ae99d10006](https://github.com/tomasbjerre/violations-gradle-plugin/commit/d0f27ae99d10006) Tomas Bjerre *2020-10-04 07:29:05*
+
+
 ## 1.45
 ### No issue
 
