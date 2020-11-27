@@ -3,6 +3,15 @@
 
 Changelog of Violations gradle plugin.
 
+## 1.48
+### No issue
+
+**violations-lib 1.137**
+
+
+[a6ca91fda252cf4](https://github.com/tomasbjerre/violations-gradle-plugin/commit/a6ca91fda252cf4) Tomas Bjerre *2020-11-27 13:14:50*
+
+
 ## 1.47
 ### No issue
 
