@@ -4,6 +4,27 @@
 Changelog of Violations gradle plugin.
 
 
+## 1.49
+ 
+  
+   
+   
+### GitHub #121   
+   
+  
+  
+
+  
+**interpreting Fatal in AndroidLint as Error**
+
+
+
+[2e787452507fc6a](https://github.com/tomasbjerre/violations-gradle-plugin/commit/2e787452507fc6a) Tomas Bjerre *2021-03-29 14:57:24*
+
+  
+
+ 
+
 ## 1.48
  
   
