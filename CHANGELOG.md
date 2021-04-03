@@ -3,6 +3,15 @@
 
 Changelog of violations-gradle-plugin.
 
+## 1.50.10
+### No issue
+
+**correcting faulty properties**
+
+
+[3083ea84e99b6eb](https://github.com/tomasbjerre/violations-gradle-plugin/commit/3083ea84e99b6eb) Tomas Bjerre *2021-04-03 20:08:56*
+
+
 ## 1.50.6
 ### No issue
 
