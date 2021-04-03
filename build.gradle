@@ -1,25 +1,22 @@
 apply plugin: 'java'
 
-project.ext.tags = ['violation', 'static code analysis', 'Checkstyle', 'CPPLint', 'CPPCheck', 'CSSLint', 'Findbugs', 'Flake8', 'PyLint', 'Pep8', 'Mccabe', 'PyFlakes', 'JSHint', 'Lint', 'PerlCritic', 'PMD', 'ReSharper', 'XMLLint']
-group = 'se.bjurr.violations'
-description = 'Gradle that will find report files from static code analysis, present and optionally fail the build.'
-
-
 buildscript {
  repositories {
-  maven { url "https://jitpack.io" }
+  mavenCentral()
+  mavenLocal()
  }
  dependencies {
-  classpath 'com.github.tomasbjerre:gradle-scripts:master-SNAPSHOT'
+  classpath 'se.bjurr.gradle:gradle-scripts:2.+'
  }
 }
-apply from: project.buildscript.classLoader.getResource('java.gradle').toURI()
-apply from: project.buildscript.classLoader.getResource('changelog.gradle').toURI()
-apply from: project.buildscript.classLoader.getResource('release.gradle').toURI()
-apply from: project.buildscript.classLoader.getResource('gradle-plugin.gradle').toURI()
-apply from: project.buildscript.classLoader.getResource('violations.gradle').toURI()
-
+project.ext.buildConfig = [
+  repoType: "GRADLE",
+  gradlePlugin: [
+    tags: ['violation', 'static code analysis', 'Checkstyle', 'CPPLint', 'CPPCheck', 'CSSLint', 'Findbugs', 'Flake8', 'PyLint', 'Pep8', 'Mccabe', 'PyFlakes', 'JSHint', 'Lint', 'PerlCritic', 'PMD', 'ReSharper', 'XMLLint']
+  ],
+]
+apply from: project.buildscript.classLoader.getResource('main.gradle').toURI()
 
 dependencies {
- compile 'se.bjurr.violations:violations-git-lib:1.45'
+ compile 'se.bjurr.violations:violations-git-lib:1.+'
 }
