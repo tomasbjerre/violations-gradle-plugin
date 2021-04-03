@@ -1,9 +1,16 @@
 
-
-
 # violations-gradle-plugin changelog
 
 Changelog of violations-gradle-plugin.
+
+## 1.50.6
+### No issue
+
+**update changelog**
+
+
+[e32c02b14e4214f](https://github.com/tomasbjerre/violations-gradle-plugin/commit/e32c02b14e4214f) Tomas Bjerre *2021-04-03 19:34:50*
+
 
 ## 1.50.4
 ### No issue
