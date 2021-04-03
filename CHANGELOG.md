@@ -1,4 +1,5 @@
 
+
 # violations-gradle-plugin changelog
 
 Changelog of violations-gradle-plugin.
