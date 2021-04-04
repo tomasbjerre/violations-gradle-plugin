@@ -14,6 +14,9 @@ project.ext.buildConfig = [
   gradlePlugin: [
     tags: ['violation', 'static code analysis', 'Checkstyle', 'CPPLint', 'CPPCheck', 'CSSLint', 'Findbugs', 'Flake8', 'PyLint', 'Pep8', 'Mccabe', 'PyFlakes', 'JSHint', 'Lint', 'PerlCritic', 'PMD', 'ReSharper', 'XMLLint']
   ],
+  violations: [
+    updateReadme: true
+  ]
 ]
 apply from: project.buildscript.classLoader.getResource('main.gradle').toURI()
 
