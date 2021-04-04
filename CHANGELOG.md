@@ -3,6 +3,20 @@
 
 Changelog of violations-gradle-plugin.
 
+## 1.50.12
+### No issue
+
+**removing violations repoType**
+
+
+[db6231de72fc2cd](https://github.com/tomasbjerre/violations-gradle-plugin/commit/db6231de72fc2cd) Tomas Bjerre *2021-04-04 14:09:13*
+
+**build.sh**
+
+
+[2fbc039ba32d539](https://github.com/tomasbjerre/violations-gradle-plugin/commit/2fbc039ba32d539) Tomas Bjerre *2021-04-03 20:26:05*
+
+
 ## 1.50.10
 ### No issue
 
