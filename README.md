@@ -1,7 +1,6 @@
 # Violations Gradle Plugin
 [![Build Status](https://travis-ci.org/tomasbjerre/violations-gradle-plugin.svg?branch=master)](https://travis-ci.org/tomasbjerre/violations-gradle-plugin)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/se.bjurr.violations/violations-gradle-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/se.bjurr.violations/violations-gradle-plugin)
-[![Bintray](https://api.bintray.com/packages/tomasbjerre/tomasbjerre/se.bjurr.violations%3Aviolations-gradle-plugin/images/download.svg)](https://bintray.com/tomasbjerre/tomasbjerre/se.bjurr.violations%3Aviolations-gradle-plugin/_latestVersion)
 
 This is a Gradle plugin for [Violations Lib](https://github.com/tomasbjerre/violations-lib). There is also a [Maven plugin](https://github.com/tomasbjerre/violations-maven-plugin) for this.
 
