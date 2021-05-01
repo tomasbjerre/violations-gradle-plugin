@@ -3,6 +3,20 @@
 
 Changelog of violations-gradle-plugin.
 
+## 1.50.13
+### No issue
+
+**more logging when checking diff**
+
+
+[7eb74d33fbd5b2e](https://github.com/tomasbjerre/violations-gradle-plugin/commit/7eb74d33fbd5b2e) Tomas Bjerre *2021-05-01 06:54:48*
+
+**removing bintray link**
+
+
+[aca1d7232ba2fdc](https://github.com/tomasbjerre/violations-gradle-plugin/commit/aca1d7232ba2fdc) Tomas Bjerre *2021-04-05 16:12:15*
+
+
 ## 1.50.12
 ### No issue
 
