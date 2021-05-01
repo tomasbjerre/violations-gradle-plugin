@@ -18,13 +18,10 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.logging.Level;
-
 import javax.script.ScriptException;
-
 import org.gradle.api.DefaultTask;
 import org.gradle.api.logging.LogLevel;
 import org.gradle.api.tasks.TaskAction;
-
 import se.bjurr.violations.git.ViolationsGit;
 import se.bjurr.violations.git.ViolationsReporterDetailLevel;
 import se.bjurr.violations.lib.ViolationsLogger;
@@ -262,7 +259,7 @@ public class ViolationsTask extends DefaultTask {
   private Set<Violation> getAllViolationsInDiff(final Set<Violation> unfilteredViolations)
       throws Exception {
     final Set<Violation> candidates = this.getFiltered(unfilteredViolations, this.diffMinSeverity);
-    return new ViolationsGit(this.violationsLogger,candidates) //
+    return new ViolationsGit(this.violationsLogger, candidates) //
         .getViolationsInChangeset(this.gitRepo, this.diffFrom, this.diffTo);
   }
 
