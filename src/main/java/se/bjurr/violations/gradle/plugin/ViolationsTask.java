@@ -33,102 +33,26 @@ import se.bjurr.violations.violationslib.com.google.gson.GsonBuilder;
 
 public class ViolationsTask extends DefaultTask {
 
-  private List<List<String>> violations = new ArrayList<>();
-  private SEVERITY minSeverity = INFO;
-  private ViolationsReporterDetailLevel detailLevel = VERBOSE;
-  private Integer maxViolations = Integer.MAX_VALUE;
-  private boolean printViolations;
-  private String diffFrom;
-  private String diffTo;
-  private SEVERITY diffMinSeverity = INFO;
-  private File gitRepo = new File(".");
-  private boolean diffPrintViolations;
-  private Integer diffMaxViolations = Integer.MAX_VALUE;
-  private ViolationsReporterDetailLevel diffDetailLevel = VERBOSE;
-  private int maxReporterColumnWidth;
-  private int maxRuleColumnWidth;
-  private int maxSeverityColumnWidth;
-  private int maxLineColumnWidth;
-  private int maxMessageColumnWidth = 30;
-  private File codeClimateFile;
-  private File violationsFile;
-  private ViolationsLogger violationsLogger;
-
-  public void setCodeClimateFile(final File codeClimateFile) {
-    this.codeClimateFile = codeClimateFile;
-  }
-
-  public void setViolationsFile(final File violationsFile) {
-    this.violationsFile = violationsFile;
-  }
-
-  public void setMinSeverity(final SEVERITY minSeverity) {
-    this.minSeverity = minSeverity;
-  }
-
-  public void setViolations(final List<List<String>> violations) {
-    this.violations = violations;
-  }
-
-  public void setDetailLevel(final ViolationsReporterDetailLevel detailLevel) {
-    this.detailLevel = detailLevel;
-  }
-
-  public void setMaxViolations(final Integer maxViolations) {
-    this.maxViolations = maxViolations;
-  }
-
-  public void setDiffDetailLevel(final ViolationsReporterDetailLevel diffDetailLevel) {
-    this.diffDetailLevel = diffDetailLevel;
-  }
-
-  public void setDiffFrom(final String diffFrom) {
-    this.diffFrom = diffFrom;
-  }
-
-  public void setDiffMaxViolations(final Integer diffMaxViolations) {
-    this.diffMaxViolations = diffMaxViolations;
-  }
-
-  public void setDiffMinSeverity(final SEVERITY diffMinSeverity) {
-    this.diffMinSeverity = diffMinSeverity;
-  }
-
-  public void setDiffTo(final String diffTo) {
-    this.diffTo = diffTo;
-  }
-
-  public void setGitRepo(final File gitRepo) {
-    this.gitRepo = gitRepo;
-  }
-
-  public void setDiffPrintViolations(final boolean diffPrintViolations) {
-    this.diffPrintViolations = diffPrintViolations;
-  }
-
-  public void setPrintViolations(final boolean printViolations) {
-    this.printViolations = printViolations;
-  }
-
-  public void setMaxLineColumnWidth(final int maxLineColumnWidth) {
-    this.maxLineColumnWidth = maxLineColumnWidth;
-  }
-
-  public void setMaxMessageColumnWidth(final int maxMessageColumnWidth) {
-    this.maxMessageColumnWidth = maxMessageColumnWidth;
-  }
-
-  public void setMaxReporterColumnWidth(final int maxReporterColumnWidth) {
-    this.maxReporterColumnWidth = maxReporterColumnWidth;
-  }
-
-  public void setMaxRuleColumnWidth(final int maxRuleColumnWidth) {
-    this.maxRuleColumnWidth = maxRuleColumnWidth;
-  }
-
-  public void setMaxSeverityColumnWidth(final int maxSeverityColumnWidth) {
-    this.maxSeverityColumnWidth = maxSeverityColumnWidth;
-  }
+  public List<List<String>> violations = new ArrayList<>();
+  public SEVERITY minSeverity = INFO;
+  public ViolationsReporterDetailLevel detailLevel = VERBOSE;
+  public Integer maxViolations = Integer.MAX_VALUE;
+  public boolean printViolations;
+  public String diffFrom;
+  public String diffTo;
+  public SEVERITY diffMinSeverity = INFO;
+  public File gitRepo = new File(".");
+  public boolean diffPrintViolations;
+  public Integer diffMaxViolations = Integer.MAX_VALUE;
+  public ViolationsReporterDetailLevel diffDetailLevel = VERBOSE;
+  public int maxReporterColumnWidth;
+  public int maxRuleColumnWidth;
+  public int maxSeverityColumnWidth;
+  public int maxLineColumnWidth;
+  public int maxMessageColumnWidth = 30;
+  public File codeClimateFile;
+  public File violationsFile;
+  public ViolationsLogger violationsLogger;
 
   @TaskAction
   public void violationsPluginTasks() throws Exception {
