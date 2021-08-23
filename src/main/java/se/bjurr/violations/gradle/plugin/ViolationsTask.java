@@ -52,6 +52,7 @@ public class ViolationsTask extends DefaultTask {
   public int maxMessageColumnWidth = 30;
   public File codeClimateFile;
   public File violationsFile;
+  public File diffViolationsFile;
   public ViolationsLogger violationsLogger;
 
   @TaskAction
@@ -100,6 +101,9 @@ public class ViolationsTask extends DefaultTask {
     }
     if (this.violationsFile != null) {
       this.createJsonFile(allParsedViolations, this.violationsFile);
+    }
+    if (this.shouldCheckDiff() && this.diffViolationsFile != null) {
+      this.createJsonFile(allParsedViolationsInDiff, this.diffViolationsFile);
     }
     this.checkGlobalViolations(allParsedViolations);
 

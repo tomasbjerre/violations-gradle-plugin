@@ -23,6 +23,7 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
  maxMessageColumnWidth = 50
  codeClimateFile = file('code-climate-file.json') // Will create a CodeClimate JSON report.
  violationsFile = file('violations-file.json') // Will create a normalized JSON report.
+ diffViolationsFile = file('diffViolations.json')
 
  //
  // Global configuration, remove if you dont want to report violations for
