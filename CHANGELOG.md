@@ -2,19 +2,31 @@
 
 Changelog of violations-gradle-plugin.
 
-## [1.50.15](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.50.15) (2021-06-01)
+## 1.51.0 (2022-03-27)
 
 
 
 ### Features
 
--  support Gradle 7 ([9d113](https://github.com/tomasbjerre/violations-gradle-plugin/commit/9d113d518daa1dc))  
+-  stepping lib versions ([2ab01](https://github.com/tomasbjerre/violations-gradle-plugin/commit/2ab0152ed5fae7f) Tomas Bjerre)  
 
 
 
 
 
-## [1.50.13](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.50.13) (2021-05-01)
+## 1.50.15 (2021-06-01)
+
+
+
+### Features
+
+-  support Gradle 7 ([9d113](https://github.com/tomasbjerre/violations-gradle-plugin/commit/9d113d518daa1dc) Tomas Bjerre)  
+
+
+
+
+
+## 1.50.13 (2021-05-01)
 
 
 
@@ -35,7 +47,7 @@ Changelog of violations-gradle-plugin.
 [aca1d](https://github.com/tomasbjerre/violations-gradle-plugin/commit/aca1d7232ba2fdc) Tomas Bjerre *2021-04-05 16:12:15*
 
 
-## [1.50.12](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.50.12) (2021-04-04)
+## 1.50.12 (2021-04-04)
 
 
 
@@ -56,7 +68,7 @@ Changelog of violations-gradle-plugin.
 [2fbc0](https://github.com/tomasbjerre/violations-gradle-plugin/commit/2fbc039ba32d539) Tomas Bjerre *2021-04-03 20:26:05*
 
 
-## [1.50.10](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.50.10) (2021-04-03)
+## 1.50.10 (2021-04-03)
 
 
 
@@ -72,7 +84,7 @@ Changelog of violations-gradle-plugin.
 [3083e](https://github.com/tomasbjerre/violations-gradle-plugin/commit/3083ea84e99b6eb) Tomas Bjerre *2021-04-03 20:08:56*
 
 
-## [1.50.6](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.50.6) (2021-04-03)
+## 1.50.6 (2021-04-03)
 
 
 
@@ -88,7 +100,7 @@ Changelog of violations-gradle-plugin.
 [e32c0](https://github.com/tomasbjerre/violations-gradle-plugin/commit/e32c02b14e4214f) Tomas Bjerre *2021-04-03 19:34:50*
 
 
-## [1.50.4](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.50.4) (2021-04-03)
+## 1.50.4 (2021-04-03)
 
 
 
@@ -104,7 +116,7 @@ Changelog of violations-gradle-plugin.
 [1970d](https://github.com/tomasbjerre/violations-gradle-plugin/commit/1970ddcbd389f27) Tomas Bjerre *2021-04-03 19:27:45*
 
 
-## [1.50.3](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.50.3) (2021-04-03)
+## 1.50.3 (2021-04-03)
 
 
 
@@ -120,7 +132,7 @@ Changelog of violations-gradle-plugin.
 [c10c4](https://github.com/tomasbjerre/violations-gradle-plugin/commit/c10c4c0816c6785) Tomas Bjerre *2021-04-03 19:23:19*
 
 
-## [1.50.1](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.50.1) (2021-04-03)
+## 1.50.1 (2021-04-03)
 
 
 
@@ -136,7 +148,7 @@ Changelog of violations-gradle-plugin.
 [a8acf](https://github.com/tomasbjerre/violations-gradle-plugin/commit/a8acf953960e847) Tomas Bjerre *2021-04-03 19:15:12*
 
 
-## [1.49](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.49) (2021-03-29)
+## 1.49 (2021-03-29)
 
 
 
@@ -152,7 +164,7 @@ Changelog of violations-gradle-plugin.
 [2e787](https://github.com/tomasbjerre/violations-gradle-plugin/commit/2e787452507fc6a) Tomas Bjerre *2021-03-29 14:57:24*
 
 
-## [1.48](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.48) (2020-11-27)
+## 1.48 (2020-11-27)
 
 
 
@@ -168,7 +180,7 @@ Changelog of violations-gradle-plugin.
 [a6ca9](https://github.com/tomasbjerre/violations-gradle-plugin/commit/a6ca91fda252cf4) Tomas Bjerre *2020-11-27 13:14:50*
 
 
-## [1.47](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.47) (2020-10-04)
+## 1.47 (2020-10-04)
 
 
 
@@ -184,7 +196,7 @@ Changelog of violations-gradle-plugin.
 [e464d](https://github.com/tomasbjerre/violations-gradle-plugin/commit/e464d459aaba557) Tomas Bjerre *2020-10-04 10:27:21*
 
 
-## [1.46](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.46) (2020-10-04)
+## 1.46 (2020-10-04)
 
 
 
@@ -200,7 +212,7 @@ Changelog of violations-gradle-plugin.
 [d0f27](https://github.com/tomasbjerre/violations-gradle-plugin/commit/d0f27ae99d10006) Tomas Bjerre *2020-10-04 07:29:05*
 
 
-## [1.45](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.45) (2020-09-27)
+## 1.45 (2020-09-27)
 
 
 
@@ -216,7 +228,7 @@ Changelog of violations-gradle-plugin.
 [964c3](https://github.com/tomasbjerre/violations-gradle-plugin/commit/964c349f53f2053) Tomas Bjerre *2020-09-27 16:20:23*
 
 
-## [1.43](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.43) (2020-09-23)
+## 1.43 (2020-09-23)
 
 
 
@@ -232,7 +244,7 @@ Changelog of violations-gradle-plugin.
 [efe0e](https://github.com/tomasbjerre/violations-gradle-plugin/commit/efe0e0b1567f22b) Tomas Bjerre *2020-09-23 16:39:40*
 
 
-## [1.42](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.42) (2020-09-20)
+## 1.42 (2020-09-20)
 
 
 
@@ -248,7 +260,7 @@ Changelog of violations-gradle-plugin.
 [26ee9](https://github.com/tomasbjerre/violations-gradle-plugin/commit/26ee92929737437) Tomas Bjerre *2020-09-20 13:03:01*
 
 
-## [1.41](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.41) (2020-07-05)
+## 1.41 (2020-07-05)
 
 
 
@@ -257,7 +269,7 @@ Changelog of violations-gradle-plugin.
 
 
 
-## [1.40](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.40) (2020-02-03)
+## 1.40 (2020-02-03)
 
 
 
@@ -273,7 +285,7 @@ Changelog of violations-gradle-plugin.
 [50605](https://github.com/tomasbjerre/violations-gradle-plugin/commit/5060507cf405f4a) Tomas Bjerre *2020-02-03 16:57:08*
 
 
-## [1.39](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.39) (2020-01-19)
+## 1.39 (2020-01-19)
 
 
 
@@ -289,7 +301,7 @@ Changelog of violations-gradle-plugin.
 [a8575](https://github.com/tomasbjerre/violations-gradle-plugin/commit/a8575053c368da6) Tomas Bjerre *2020-01-19 16:02:16*
 
 
-## [1.38](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.38) (2020-01-03)
+## 1.38 (2020-01-03)
 
 
 
@@ -305,7 +317,7 @@ Changelog of violations-gradle-plugin.
 [c87ad](https://github.com/tomasbjerre/violations-gradle-plugin/commit/c87ad313e28001a) Tomas Bjerre *2020-01-03 06:59:30*
 
 
-## [1.37](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.37) (2019-10-22)
+## 1.37 (2019-10-22)
 
 
 
@@ -321,7 +333,7 @@ Changelog of violations-gradle-plugin.
 [389e2](https://github.com/tomasbjerre/violations-gradle-plugin/commit/389e273aa91a5fb) Tomas Bjerre *2019-10-22 03:44:51*
 
 
-## [1.36](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.36) (2019-10-10)
+## 1.36 (2019-10-10)
 
 
 
@@ -357,7 +369,7 @@ Changelog of violations-gradle-plugin.
 [3cad5](https://github.com/tomasbjerre/violations-gradle-plugin/commit/3cad5697a2bb1f4) Tomas Bjerre *2019-10-08 17:58:48*
 
 
-## [1.33](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.33) (2019-10-06)
+## 1.33 (2019-10-06)
 
 
 
@@ -373,7 +385,7 @@ Changelog of violations-gradle-plugin.
 [1f36e](https://github.com/tomasbjerre/violations-gradle-plugin/commit/1f36e67f9635976) Tomas Bjerre *2019-10-06 16:35:54*
 
 
-## [1.32](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.32) (2019-10-05)
+## 1.32 (2019-10-05)
 
 
 
@@ -389,7 +401,7 @@ Changelog of violations-gradle-plugin.
 [b886b](https://github.com/tomasbjerre/violations-gradle-plugin/commit/b886bdafaf6dc0b) Tomas Bjerre *2019-10-05 06:27:35*
 
 
-## [1.31](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.31) (2019-10-04)
+## 1.31 (2019-10-04)
 
 
 
@@ -405,7 +417,7 @@ Changelog of violations-gradle-plugin.
 [469f9](https://github.com/tomasbjerre/violations-gradle-plugin/commit/469f9ede9a1be67) Tomas Bjerre *2019-10-04 14:52:32*
 
 
-## [1.30](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.30) (2019-10-03)
+## 1.30 (2019-10-03)
 
 
 
@@ -421,7 +433,7 @@ Changelog of violations-gradle-plugin.
 [d1ccf](https://github.com/tomasbjerre/violations-gradle-plugin/commit/d1ccfc9d984bcfc) Tomas Bjerre *2019-10-03 18:13:23*
 
 
-## [1.29](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.29) (2019-10-03)
+## 1.29 (2019-10-03)
 
 
 
@@ -447,7 +459,7 @@ Changelog of violations-gradle-plugin.
 [ec31d](https://github.com/tomasbjerre/violations-gradle-plugin/commit/ec31d1522cc0513) Tomas Bjerre *2019-09-28 06:59:22*
 
 
-## [1.28](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.28) (2019-09-07)
+## 1.28 (2019-09-07)
 
 
 
@@ -463,7 +475,7 @@ Changelog of violations-gradle-plugin.
 [85d90](https://github.com/tomasbjerre/violations-gradle-plugin/commit/85d905dfef487b3) Tomas Bjerre *2019-09-07 14:53:24*
 
 
-## [1.27](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.27) (2019-08-03)
+## 1.27 (2019-08-03)
 
 
 
@@ -489,7 +501,7 @@ Changelog of violations-gradle-plugin.
 [5aeee](https://github.com/tomasbjerre/violations-gradle-plugin/commit/5aeee681daf8cac) Tomas Bjerre *2019-06-12 19:54:45*
 
 
-## [1.26](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.26) (2019-03-30)
+## 1.26 (2019-03-30)
 
 
 
@@ -505,7 +517,7 @@ Changelog of violations-gradle-plugin.
 [96c95](https://github.com/tomasbjerre/violations-gradle-plugin/commit/96c95bb9eb35e7f) Tomas Bjerre *2019-03-30 19:57:22*
 
 
-## [1.25](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.25) (2019-03-23)
+## 1.25 (2019-03-23)
 
 
 
@@ -521,7 +533,7 @@ Changelog of violations-gradle-plugin.
 [56228](https://github.com/tomasbjerre/violations-gradle-plugin/commit/56228f8fd130afe) Tomas Bjerre *2019-03-23 15:00:55*
 
 
-## [1.24](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.24) (2019-03-13)
+## 1.24 (2019-03-13)
 
 
 
@@ -537,7 +549,7 @@ Changelog of violations-gradle-plugin.
 [8548b](https://github.com/tomasbjerre/violations-gradle-plugin/commit/8548b9ccc541739) Tomas Bjerre *2019-03-13 19:10:43*
 
 
-## [1.23](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.23) (2019-03-07)
+## 1.23 (2019-03-07)
 
 
 
@@ -564,7 +576,7 @@ Changelog of violations-gradle-plugin.
 [a7089](https://github.com/tomasbjerre/violations-gradle-plugin/commit/a70892c5fd4ed6c) Per Lundberg *2019-01-22 13:14:04*
 
 
-## [1.21](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.21) (2019-01-14)
+## 1.21 (2019-01-14)
 
 
 
@@ -580,7 +592,7 @@ Changelog of violations-gradle-plugin.
 [e24b1](https://github.com/tomasbjerre/violations-gradle-plugin/commit/e24b1e9ea92f81f) Tomas Bjerre *2019-01-14 17:25:20*
 
 
-## [1.20](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.20) (2019-01-09)
+## 1.20 (2019-01-09)
 
 
 
@@ -623,7 +635,7 @@ Changelog of violations-gradle-plugin.
 [80dcd](https://github.com/tomasbjerre/violations-gradle-plugin/commit/80dcd3b6f418132) Tomas Bjerre *2018-09-22 08:42:08*
 
 
-## [1.18](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.18) (2018-09-20)
+## 1.18 (2018-09-20)
 
 
 
@@ -639,7 +651,7 @@ Changelog of violations-gradle-plugin.
 [7134d](https://github.com/tomasbjerre/violations-gradle-plugin/commit/7134d70259f19a3) Tomas Bjerre *2018-09-20 23:48:19*
 
 
-## [1.17](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.17) (2018-09-20)
+## 1.17 (2018-09-20)
 
 
 
@@ -655,7 +667,7 @@ Changelog of violations-gradle-plugin.
 [11f12](https://github.com/tomasbjerre/violations-gradle-plugin/commit/11f1274fcf0d538) Tomas Bjerre *2018-09-20 14:05:00*
 
 
-## [1.16](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.16) (2018-09-17)
+## 1.16 (2018-09-17)
 
 
 
@@ -671,7 +683,7 @@ Changelog of violations-gradle-plugin.
 [c1b95](https://github.com/tomasbjerre/violations-gradle-plugin/commit/c1b95be7450ac89) Tomas Bjerre *2018-09-17 13:20:36*
 
 
-## [1.15](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.15) (2018-09-15)
+## 1.15 (2018-09-15)
 
 
 
@@ -687,7 +699,7 @@ Changelog of violations-gradle-plugin.
 [f31a1](https://github.com/tomasbjerre/violations-gradle-plugin/commit/f31a11e28399592) Tomas Bjerre *2018-09-15 07:45:33*
 
 
-## [1.14](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.14) (2018-09-12)
+## 1.14 (2018-09-12)
 
 
 
@@ -713,7 +725,7 @@ Changelog of violations-gradle-plugin.
 [a0aac](https://github.com/tomasbjerre/violations-gradle-plugin/commit/a0aac05307cc616) Tomas Bjerre *2018-04-14 05:50:53*
 
 
-## [1.13](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.13) (2018-02-13)
+## 1.13 (2018-02-13)
 
 
 
@@ -729,7 +741,7 @@ Changelog of violations-gradle-plugin.
 [85b6c](https://github.com/tomasbjerre/violations-gradle-plugin/commit/85b6cfd749f49d1) Tomas Bjerre *2018-02-13 18:45:53*
 
 
-## [1.12](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.12) (2018-01-14)
+## 1.12 (2018-01-14)
 
 
 
@@ -750,7 +762,7 @@ Changelog of violations-gradle-plugin.
 [a4c86](https://github.com/tomasbjerre/violations-gradle-plugin/commit/a4c8662872a760c) Tomas Bjerre *2018-01-14 07:11:09*
 
 
-## [1.11](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.11) (2018-01-13)
+## 1.11 (2018-01-13)
 
 
 
@@ -766,7 +778,7 @@ Changelog of violations-gradle-plugin.
 [eb1ca](https://github.com/tomasbjerre/violations-gradle-plugin/commit/eb1ca1700f7d9b5) Tomas Bjerre *2018-01-13 19:28:44*
 
 
-## [1.10](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.10) (2017-12-31)
+## 1.10 (2017-12-31)
 
 
 
@@ -782,7 +794,7 @@ Changelog of violations-gradle-plugin.
 [ca14b](https://github.com/tomasbjerre/violations-gradle-plugin/commit/ca14b7c3fe93baf) Tomas Bjerre *2017-12-31 08:26:42*
 
 
-## [1.9](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.9) (2017-12-31)
+## 1.9 (2017-12-31)
 
 
 
@@ -804,7 +816,7 @@ Changelog of violations-gradle-plugin.
 [435b5](https://github.com/tomasbjerre/violations-gradle-plugin/commit/435b551dfccf5de) Sam Judd *2017-12-31 07:52:04*
 
 
-## [1.8](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.8) (2017-12-31)
+## 1.8 (2017-12-31)
 
 
 
@@ -830,7 +842,7 @@ Changelog of violations-gradle-plugin.
 [f5985](https://github.com/tomasbjerre/violations-gradle-plugin/commit/f5985c815180509) Tomas Bjerre *2017-12-30 16:50:33*
 
 
-## [1.7](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.7) (2017-12-30)
+## 1.7 (2017-12-30)
 
 
 
@@ -856,7 +868,7 @@ Changelog of violations-gradle-plugin.
 [b66be](https://github.com/tomasbjerre/violations-gradle-plugin/commit/b66bea3f99acb78) Sam Judd *2017-12-29 06:37:32*
 
 
-## [1.3](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.3) (2017-12-27)
+## 1.3 (2017-12-27)
 
 
 
@@ -878,7 +890,7 @@ Changelog of violations-gradle-plugin.
 [80eb5](https://github.com/tomasbjerre/violations-gradle-plugin/commit/80eb54a8d367a42) Tomas Bjerre *2017-12-26 19:36:56*
 
 
-## [1.2](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.2) (2017-12-25)
+## 1.2 (2017-12-25)
 
 
 
@@ -899,7 +911,7 @@ Changelog of violations-gradle-plugin.
 [7bc7c](https://github.com/tomasbjerre/violations-gradle-plugin/commit/7bc7c32e12eaea3) Tomas Bjerre *2017-12-25 08:44:28*
 
 
-## [1.1](https://github.com/tomasbjerre/violations-gradle-plugin/releases/tag/1.1) (2017-12-25)
+## 1.1 (2017-12-25)
 
 
 
@@ -914,5 +926,9 @@ Changelog of violations-gradle-plugin.
 
 [240b7](https://github.com/tomasbjerre/violations-gradle-plugin/commit/240b7f848287986) Tomas Bjerre *2017-12-25 06:52:30*
 
+**Initial**
 
-    
+
+[258bc](https://github.com/tomasbjerre/violations-gradle-plugin/commit/258bcf78f187ce0) Tomas Bjerre *2017-12-24 12:45:35*
+
+
