@@ -2,37 +2,25 @@
 
 Changelog of violations-gradle-plugin.
 
+## 1.52.0 (2022-09-01)
+
+### Features
+
+-  stepping violations-lib ([54746](https://github.com/tomasbjerre/violations-gradle-plugin/commit/54746c51bd9a365) Tomas Bjerre)  
+
 ## 1.51.0 (2022-03-27)
-
-
 
 ### Features
 
 -  stepping lib versions ([2ab01](https://github.com/tomasbjerre/violations-gradle-plugin/commit/2ab0152ed5fae7f) Tomas Bjerre)  
 
-
-
-
-
 ## 1.50.15 (2021-06-01)
-
-
 
 ### Features
 
 -  support Gradle 7 ([9d113](https://github.com/tomasbjerre/violations-gradle-plugin/commit/9d113d518daa1dc) Tomas Bjerre)  
 
-
-
-
-
 ## 1.50.13 (2021-05-01)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -49,12 +37,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.50.12 (2021-04-04)
 
-
-
-
-
-
-
 ### Other changes
 
 **removing violations repoType**
@@ -70,12 +52,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.50.10 (2021-04-03)
 
-
-
-
-
-
-
 ### Other changes
 
 **correcting faulty properties**
@@ -85,12 +61,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.50.6 (2021-04-03)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -102,12 +72,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.50.4 (2021-04-03)
 
-
-
-
-
-
-
 ### Other changes
 
 **update changelog**
@@ -117,12 +81,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.50.3 (2021-04-03)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -134,12 +92,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.50.1 (2021-04-03)
 
-
-
-
-
-
-
 ### Other changes
 
 **new build script**
@@ -149,12 +101,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.49 (2021-03-29)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -166,12 +112,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.48 (2020-11-27)
 
-
-
-
-
-
-
 ### Other changes
 
 **violations-lib 1.137**
@@ -181,12 +121,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.47 (2020-10-04)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -198,12 +132,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.46 (2020-10-04)
 
-
-
-
-
-
-
 ### Other changes
 
 **check_name and engine_name in CodeClimate #112**
@@ -213,12 +141,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.45 (2020-09-27)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -230,12 +152,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.43 (2020-09-23)
 
-
-
-
-
-
-
 ### Other changes
 
 **Allow Checkstyle reports with no line**
@@ -245,12 +161,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.42 (2020-09-20)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -262,20 +172,7 @@ Changelog of violations-gradle-plugin.
 
 ## 1.41 (2020-07-05)
 
-
-
-
-
-
-
-
 ## 1.40 (2020-02-03)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -287,12 +184,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.39 (2020-01-19)
 
-
-
-
-
-
-
 ### Other changes
 
 **Filtering out duplicated violations**
@@ -302,12 +193,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.38 (2020-01-03)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -319,12 +204,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.37 (2019-10-22)
 
-
-
-
-
-
-
 ### Other changes
 
 **Protolint tomasbjerre/violations-lib#79**
@@ -334,12 +213,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.36 (2019-10-10)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -371,12 +244,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.33 (2019-10-06)
 
-
-
-
-
-
-
 ### Other changes
 
 **Avoiding checking diff if not needed**
@@ -386,12 +253,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.32 (2019-10-05)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -403,12 +264,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.31 (2019-10-04)
 
-
-
-
-
-
-
 ### Other changes
 
 **Always front slashes when searching FS**
@@ -419,12 +274,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.30 (2019-10-03)
 
-
-
-
-
-
-
 ### Other changes
 
 **Using ASCII chars in tables**
@@ -434,12 +283,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.29 (2019-10-03)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -461,12 +304,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.28 (2019-09-07)
 
-
-
-
-
-
-
 ### Other changes
 
 **CodeClimate export**
@@ -476,12 +313,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.27 (2019-08-03)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -503,12 +334,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.26 (2019-03-30)
 
-
-
-
-
-
-
 ### Other changes
 
 **Correcting Sonar severity**
@@ -518,12 +343,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.25 (2019-03-23)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -535,12 +354,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.24 (2019-03-13)
 
-
-
-
-
-
-
 ### Other changes
 
 **Klocwork line numbers**
@@ -550,12 +363,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.23 (2019-03-07)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -578,12 +385,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.21 (2019-01-14)
 
-
-
-
-
-
-
 ### Other changes
 
 **Avoiding faulty slash with CodeNarc**
@@ -593,12 +394,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.20 (2019-01-09)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -637,12 +432,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.18 (2018-09-20)
 
-
-
-
-
-
-
 ### Other changes
 
 **Correcting Kotlin parsers**
@@ -652,12 +441,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.17 (2018-09-20)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -669,12 +452,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.16 (2018-09-17)
 
-
-
-
-
-
-
 ### Other changes
 
 **Fix optional rule in YAMLLint**
@@ -685,12 +462,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.15 (2018-09-15)
 
-
-
-
-
-
-
 ### Other changes
 
 **YAMLLint**
@@ -700,12 +471,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.14 (2018-09-12)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -727,12 +492,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.13 (2018-02-13)
 
-
-
-
-
-
-
 ### Other changes
 
 **PCLint**
@@ -742,12 +501,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.12 (2018-01-14)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -764,12 +517,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.11 (2018-01-13)
 
-
-
-
-
-
-
 ### Other changes
 
 **Parameterize max width of reporter table**
@@ -780,12 +527,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.10 (2017-12-31)
 
-
-
-
-
-
-
 ### Other changes
 
 **Defaulting detail level to VERBOSE**
@@ -795,12 +536,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.9 (2017-12-31)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -817,12 +552,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.8 (2017-12-31)
-
-
-
-
-
-
 
 ### Other changes
 
@@ -844,12 +573,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.7 (2017-12-30)
 
-
-
-
-
-
-
 ### Other changes
 
 **Bumping version to fix release**
@@ -870,12 +593,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.3 (2017-12-27)
 
-
-
-
-
-
-
 ### Other changes
 
 **Always print the full report if more than the max violations are found.**
@@ -892,12 +609,6 @@ Changelog of violations-gradle-plugin.
 
 ## 1.2 (2017-12-25)
 
-
-
-
-
-
-
 ### Other changes
 
 **Limiting width**
@@ -912,12 +623,6 @@ Changelog of violations-gradle-plugin.
 
 
 ## 1.1 (2017-12-25)
-
-
-
-
-
-
 
 ### Other changes
 
