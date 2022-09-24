@@ -2,6 +2,12 @@
 
 Changelog of violations-gradle-plugin.
 
+## 1.52.1 (2022-09-24)
+
+### Bug Fixes
+
+-  make paths relative in CodeClimate ([05fe8](https://github.com/tomasbjerre/violations-gradle-plugin/commit/05fe8dd3d3520f7) Tomas Bjerre)  
+
 ## 1.52.0 (2022-09-01)
 
 ### Features
