@@ -2,6 +2,12 @@
 
 Changelog of violations-gradle-plugin.
 
+## 1.52.2 (2022-09-24)
+
+### Bug Fixes
+
+-  relative in CodeClimate ([7260f](https://github.com/tomasbjerre/violations-gradle-plugin/commit/7260ff0b48b1583) Tomas Bjerre)  
+
 ## 1.52.1 (2022-09-24)
 
 ### Bug Fixes
