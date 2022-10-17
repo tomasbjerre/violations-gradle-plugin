@@ -180,7 +180,7 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
  maxSeverityColumnWidth = 0
  maxLineColumnWidth = 0
  maxMessageColumnWidth = 50
- codeClimateFile = file('code-climate-file.json') // Will create a CodeClimate JSON report.
+ codeClimateFile = file('gl-code-quality-report.json') // Will create a CodeClimate JSON report.
  violationsFile = file('violations-file.json') // Will create a normalized JSON report.
 
 
