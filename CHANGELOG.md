@@ -2,6 +2,12 @@
 
 Changelog of violations-gradle-plugin.
 
+## 1.52.3 (2023-01-15)
+
+### Bug Fixes
+
+-  relative paths to root in sarif/codeclimate export ([1b32b](https://github.com/tomasbjerre/violations-gradle-plugin/commit/1b32beab15df06f) Tomas Bjerre)  
+
 ## 1.52.2 (2022-09-24)
 
 ### Bug Fixes
