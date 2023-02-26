@@ -13,6 +13,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -110,12 +111,10 @@ public class ViolationsTask extends DefaultTask {
 
   private void createJsonFile(final Object object, final File file) throws IOException {
     final String codeClimateReport = new GsonBuilder().setPrettyPrinting().create().toJson(object);
+    final Path path = file.toPath();
+    path.toFile().getParentFile().mkdirs();
     Files.write(
-        file.toPath(),
-        codeClimateReport.getBytes(StandardCharsets.UTF_8),
-        TRUNCATE_EXISTING,
-        CREATE,
-        WRITE);
+        path, codeClimateReport.getBytes(StandardCharsets.UTF_8), TRUNCATE_EXISTING, CREATE, WRITE);
   }
 
   private void checkGlobalViolations(final Set<Violation> violations) throws ScriptException {
