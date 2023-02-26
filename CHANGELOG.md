@@ -2,6 +2,12 @@
 
 Changelog of violations-gradle-plugin.
 
+## 1.52.4 (2023-02-26)
+
+### Bug Fixes
+
+-  create directories of json report ([82a64](https://github.com/tomasbjerre/violations-gradle-plugin/commit/82a64117166d1fd) Tomas Bjerre)  [#21](https://github.com/tomasbjerre/violations-gradle-plugin/issues/21)  
+
 ## 1.52.3 (2023-01-15)
 
 ### Bug Fixes
