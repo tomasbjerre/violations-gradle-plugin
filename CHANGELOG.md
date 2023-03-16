@@ -2,6 +2,12 @@
 
 Changelog of violations-gradle-plugin.
 
+## 1.52.5 (2023-03-16)
+
+### Bug Fixes
+
+-  rule resolution in sarif ([e7138](https://github.com/tomasbjerre/violations-gradle-plugin/commit/e713832b981d983) Tomas Bjerre)  
+
 ## 1.52.4 (2023-02-26)
 
 ### Bug Fixes
