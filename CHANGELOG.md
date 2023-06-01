@@ -2,6 +2,12 @@
 
 Changelog of violations-gradle-plugin.
 
+## 1.52.6 (2023-06-01)
+
+### Bug Fixes
+
+-  massive speed regression when processing lots of files ([7a0d2](https://github.com/tomasbjerre/violations-gradle-plugin/commit/7a0d2e319b0910c) Tomas Bjerre)  
+
 ## 1.52.5 (2023-03-16)
 
 ### Bug Fixes
