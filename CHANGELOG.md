@@ -2,6 +2,13 @@
 
 Changelog of violations-gradle-plugin.
 
+## 1.52.7 (2023-09-17)
+
+### Bug Fixes
+
+-  avoiding duplicated fingerprints in CodeClimate report ([f35e4](https://github.com/tomasbjerre/violations-gradle-plugin/commit/f35e4716823d072) Tomas Bjerre)  
+-  allow MSBuild in Program Files (x86) and support NU1701 ([41a82](https://github.com/tomasbjerre/violations-gradle-plugin/commit/41a82577ebd2311) Tomas Bjerre)  
+
 ## 1.52.6 (2023-06-01)
 
 ### Bug Fixes
