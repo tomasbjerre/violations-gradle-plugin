@@ -2,6 +2,12 @@
 
 Changelog of violations-gradle-plugin.
 
+## 2.0.0 (2024-01-27)
+
+### Breaking changes
+
+-  JGit 6 and Java 11 ([db5cd](https://github.com/tomasbjerre/violations-gradle-plugin/commit/db5cd07f815dbf1) Tomas Bjerre)  
+
 ## 1.52.7 (2023-09-17)
 
 ### Bug Fixes
