@@ -1,7 +1,8 @@
 # Violations Gradle Plugin
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/se.bjurr.violations/violations-gradle-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/se.bjurr.violations/violations-gradle-plugin)
 
 This is a Gradle plugin for [Violations Lib](https://github.com/tomasbjerre/violations-lib). There is also a [Maven plugin](https://github.com/tomasbjerre/violations-maven-plugin) for this.
+
+Published to [plugins.gradle.org](https://plugins.gradle.org/plugin/se.bjurr.violations.violations-gradle-plugin).
 
 It can parse results from static code analysis and:
 
