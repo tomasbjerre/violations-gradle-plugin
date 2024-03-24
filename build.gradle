@@ -1,4 +1,4 @@
-apply plugin: 'java'
+apply plugin: 'java-library'
 
 buildscript {
  repositories {
@@ -12,7 +12,8 @@ buildscript {
 project.ext.buildConfig = [
   repoType: "GRADLE",
   gradlePlugin: [
-    tags: ['violation', 'static code analysis', 'Checkstyle', 'CPPLint', 'CPPCheck', 'CSSLint', 'Findbugs', 'Flake8', 'PyLint', 'Pep8', 'Mccabe', 'PyFlakes', 'JSHint', 'Lint', 'PerlCritic', 'PMD', 'ReSharper', 'XMLLint']
+    tags: ['violation', 'static code analysis', 'Checkstyle', 'CPPLint', 'CPPCheck', 'CSSLint', 'Findbugs', 'Flake8', 'PyLint', 'Pep8', 'Mccabe', 'PyFlakes', 'JSHint', 'Lint', 'PerlCritic', 'PMD', 'ReSharper', 'XMLLint'],
+    implementationClass: 'se.bjurr.violations.gradle.plugin.ViolationsGradlePlugin'
   ],
   violations: [
     updateReadme: true
@@ -21,5 +22,5 @@ project.ext.buildConfig = [
 apply from: project.buildscript.classLoader.getResource('main.gradle').toURI()
 
 dependencies {
- implementation 'se.bjurr.violations:violations-git-lib:2.0.0'
+ implementation 'se.bjurr.violations:violations-git-lib:2.1.0'
 }
