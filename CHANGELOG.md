@@ -2,6 +2,12 @@
 
 Changelog of violations-gradle-plugin.
 
+## 2.1.0 (2024-03-24)
+
+### Features
+
+-  coverity parser ([79f0b](https://github.com/tomasbjerre/violations-gradle-plugin/commit/79f0b8b26bfa1f1) Tomas Bjerre)  
+
 ## 2.0.0 (2024-01-27)
 
 ### Breaking changes
