@@ -22,5 +22,5 @@ project.ext.buildConfig = [
 apply from: project.buildscript.classLoader.getResource('main.gradle').toURI()
 
 dependencies {
- implementation 'se.bjurr.violations:violations-git-lib:2.1.0'
+ implementation 'se.bjurr.violations:violations-git-lib:2.2.0'
 }
