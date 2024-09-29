@@ -2,6 +2,12 @@
 
 Changelog of violations-gradle-plugin.
 
+## 2.1.2 (2024-09-29)
+
+### Bug Fixes
+
+-  relocating se and de ([c75f5](https://github.com/tomasbjerre/violations-gradle-plugin/commit/c75f562446d1545) Tomas Bjerre)  
+
 ## 2.1.1 (2024-09-29)
 
 ### Bug Fixes
