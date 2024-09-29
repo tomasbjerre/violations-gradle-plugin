@@ -2,6 +2,12 @@
 
 Changelog of violations-gradle-plugin.
 
+## 2.1.1 (2024-09-29)
+
+### Bug Fixes
+
+-  correcting classpath issue with duplicate classes ([264ed](https://github.com/tomasbjerre/violations-gradle-plugin/commit/264ed45d3d8354f) Tomas Bjerre)  
+
 ## 2.1.0 (2024-03-24)
 
 ### Features
