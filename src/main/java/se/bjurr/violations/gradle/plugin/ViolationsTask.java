@@ -3,11 +3,11 @@ package se.bjurr.violations.gradle.plugin;
 import static java.nio.file.StandardOpenOption.CREATE;
 import static java.nio.file.StandardOpenOption.TRUNCATE_EXISTING;
 import static java.nio.file.StandardOpenOption.WRITE;
-import static se.bjurr.violations.git.ViolationsReporterApi.violationsReporterApi;
-import static se.bjurr.violations.git.ViolationsReporterDetailLevel.VERBOSE;
-import static se.bjurr.violations.lib.ViolationsApi.violationsApi;
-import static se.bjurr.violations.lib.model.SEVERITY.INFO;
-import static se.bjurr.violations.lib.model.codeclimate.CodeClimateTransformer.fromViolations;
+import static se.bjurr.violations.violationsgitlib.se.bjurr.violations.git.ViolationsReporterApi.violationsReporterApi;
+import static se.bjurr.violations.violationsgitlib.se.bjurr.violations.git.ViolationsReporterDetailLevel.VERBOSE;
+import static se.bjurr.violations.violationsgitlib.se.bjurr.violations.lib.ViolationsApi.violationsApi;
+import static se.bjurr.violations.violationsgitlib.se.bjurr.violations.lib.model.SEVERITY.INFO;
+import static se.bjurr.violations.violationsgitlib.se.bjurr.violations.lib.model.codeclimate.CodeClimateTransformer.fromViolations;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,14 +23,14 @@ import javax.script.ScriptException;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.logging.LogLevel;
 import org.gradle.api.tasks.TaskAction;
-import se.bjurr.violations.git.ViolationsGit;
-import se.bjurr.violations.git.ViolationsReporterDetailLevel;
-import se.bjurr.violations.lib.ViolationsLogger;
-import se.bjurr.violations.lib.model.SEVERITY;
-import se.bjurr.violations.lib.model.Violation;
-import se.bjurr.violations.lib.reports.Parser;
-import se.bjurr.violations.lib.util.Filtering;
-import se.bjurr.violations.violationslib.com.google.gson.GsonBuilder;
+import se.bjurr.violations.violationsgitlib.se.bjurr.violations.git.ViolationsGit;
+import se.bjurr.violations.violationsgitlib.se.bjurr.violations.git.ViolationsReporterDetailLevel;
+import se.bjurr.violations.violationsgitlib.se.bjurr.violations.lib.ViolationsLogger;
+import se.bjurr.violations.violationsgitlib.se.bjurr.violations.lib.model.SEVERITY;
+import se.bjurr.violations.violationsgitlib.se.bjurr.violations.lib.model.Violation;
+import se.bjurr.violations.violationsgitlib.se.bjurr.violations.lib.reports.Parser;
+import se.bjurr.violations.violationsgitlib.se.bjurr.violations.lib.util.Filtering;
+import se.bjurr.violations.violationsgitlib.se.bjurr.violations.violationslib.com.google.gson.GsonBuilder;
 
 public class ViolationsTask extends DefaultTask {
 
