@@ -1,6 +1,3 @@
-# violations-gradle-plugin changelog
-
-Changelog of violations-gradle-plugin.
 
 ## 2.1.2 (2024-09-29)
 

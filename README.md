@@ -2,6 +2,11 @@
 
 This is a Gradle plugin for [Violations Lib](https://github.com/tomasbjerre/violations-lib). There is also a [Maven plugin](https://github.com/tomasbjerre/violations-maven-plugin) for this.
 
+| Version           | Java Version |
+| ------------------| ------------ |
+| version < 2.0.0   | 8            |
+| 2.0.0 <= version  | 11           |
+
 Published to [plugins.gradle.org](https://plugins.gradle.org/plugin/se.bjurr.violations.violations-gradle-plugin).
 
 It can parse results from static code analysis and:
@@ -150,7 +155,7 @@ A number of **parsers** have been implemented. Some **parsers** can parse output
 
 Missing a format? Open an issue [here](https://github.com/tomasbjerre/violations-lib/issues)!
 
-## Usage ##
+## Usage
 There is a running example [here](https://github.com/tomasbjerre/violations-gradle-plugin/tree/master/violations-gradle-plugin-example).
 
 Having the following in the build script will make the plugin run with `./gradlew build`.

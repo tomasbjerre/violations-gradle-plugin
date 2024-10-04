@@ -1,26 +1,9 @@
-apply plugin: 'java-library'
-
-buildscript {
- repositories {
-  mavenCentral()
-  mavenLocal()
- }
- dependencies {
-  classpath 'se.bjurr.gradle:gradle-scripts:2.+'
- }
+plugins {
+	id "se.bjurr.gradle.conventional-release"
+	id "se.bjurr.gradle.java-convention"
+	id "se.bjurr.gradle.update-versions"
 }
-project.ext.buildConfig = [
-  repoType: "GRADLE",
-  gradlePlugin: [
-    tags: ['violation', 'static code analysis', 'Checkstyle', 'CPPLint', 'CPPCheck', 'CSSLint', 'Findbugs', 'Flake8', 'PyLint', 'Pep8', 'Mccabe', 'PyFlakes', 'JSHint', 'Lint', 'PerlCritic', 'PMD', 'ReSharper', 'XMLLint'],
-    implementationClass: 'se.bjurr.violations.gradle.plugin.ViolationsGradlePlugin'
-  ],
-  violations: [
-    updateReadme: true
-  ]
-]
-apply from: project.buildscript.classLoader.getResource('main.gradle').toURI()
 
 dependencies {
- implementation 'se.bjurr.violations:violations-git-lib:2.2.1'
+	implementation 'se.bjurr.violations:violations-git-lib:2.3.2'
 }
