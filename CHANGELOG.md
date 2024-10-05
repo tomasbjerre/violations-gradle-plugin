@@ -1,3 +1,9 @@
+## 2.2.0 (2024-10-05)
+
+### Features
+
+-  new build script and stepping dependencies ([bdc7e](https://github.com/tomasbjerre/violations-gradle-plugin/commit/bdc7e4cfd63800c) Tomas Bjerre)  
+
 
 ## 2.1.2 (2024-09-29)
 
