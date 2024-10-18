@@ -1,3 +1,9 @@
+## 2.2.2 (2024-10-18)
+
+### Bug Fixes
+
+-  accidentally used wrong plugin id in Gradle Plugin Portal ([9eeee](https://github.com/tomasbjerre/violations-gradle-plugin/commit/9eeeec31d5add5c) Tomas Bjerre)  
+
 ## 2.2.1 (2024-10-18)
 
 ## 2.2.0 (2024-10-05)
