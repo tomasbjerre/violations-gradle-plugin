@@ -1,3 +1,9 @@
+## 2.3.0 (2024-11-07)
+
+### Features
+
+-  lazy loading of maxViolations ([f6f9f](https://github.com/tomasbjerre/violations-gradle-plugin/commit/f6f9fa458d721a2) Tomas Bjerre)  
+
 ## 2.2.2 (2024-10-18)
 
 ### Bug Fixes
