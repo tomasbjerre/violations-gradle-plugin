@@ -94,3 +94,18 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
 		]
 	]
 }
+
+
+task violationsMaxAsProperty(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
+	// Lazy loading
+	maxViolations = 99999999
+
+	violations = [
+		[
+			"FINDBUGS",
+			projectDir.path,
+			".*/findbugs/.*\\.xml\$",
+			"Findbugs"
+		]
+	]
+}

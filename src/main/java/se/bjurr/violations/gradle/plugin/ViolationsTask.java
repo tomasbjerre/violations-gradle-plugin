@@ -22,6 +22,7 @@ import java.util.logging.Level;
 import javax.script.ScriptException;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.logging.LogLevel;
+import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.TaskAction;
 import se.bjurr.violations.git.ViolationsGit;
 import se.bjurr.violations.git.ViolationsReporterDetailLevel;
@@ -37,7 +38,8 @@ public class ViolationsTask extends DefaultTask {
   public List<List<String>> violations = new ArrayList<>();
   public SEVERITY minSeverity = INFO;
   public ViolationsReporterDetailLevel detailLevel = VERBOSE;
-  public Integer maxViolations = Integer.MAX_VALUE;
+  public final Property<Integer> maxViolations =
+      this.getProject().getObjects().property(Integer.class).convention(Integer.MAX_VALUE);
   public boolean printViolations;
   public String diffFrom;
   public String diffTo;
@@ -54,6 +56,10 @@ public class ViolationsTask extends DefaultTask {
   public File codeClimateFile;
   public File violationsFile;
   public ViolationsLogger violationsLogger;
+
+  public void setMaxViolations(final Integer maxViolations) {
+    this.maxViolations.set(maxViolations);
+  }
 
   @TaskAction
   public void violationsPluginTasks() throws Exception {
@@ -118,7 +124,7 @@ public class ViolationsTask extends DefaultTask {
   }
 
   private void checkGlobalViolations(final Set<Violation> violations) throws ScriptException {
-    final boolean tooManyViolations = violations.size() > this.maxViolations;
+    final boolean tooManyViolations = violations.size() > this.maxViolations.get();
     if (!tooManyViolations && !this.printViolations) {
       return;
     }
@@ -137,7 +143,7 @@ public class ViolationsTask extends DefaultTask {
       this.getLogger().error("\nViolations:\n\n" + report);
       throw new ScriptException(
           "Too many violations found, max is "
-              + this.maxViolations
+              + this.maxViolations.get()
               + " but found "
               + violations.size()
               + ". You can adjust this with the 'maxViolations' configuration parameter.");
