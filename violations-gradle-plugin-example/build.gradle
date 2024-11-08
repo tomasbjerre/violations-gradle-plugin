@@ -95,17 +95,23 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
 	]
 }
 
+/**
+ * Test lazy loaded value.
+ */
+interface ViolationsTestExtension {
+    Property<Integer> getMaxViolations()
+}
 
-task violationsMaxAsProperty(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
-	// Lazy loading
-	maxViolations = 99999999
+def extension = project.extensions.create("violationsTestExtension", ViolationsTestExtension)
+extension.maxViolations.convention(Integer.MAX_VALUE)
 
-	violations = [
-		[
-			"FINDBUGS",
-			projectDir.path,
-			".*/findbugs/.*\\.xml\$",
-			"Findbugs"
-		]
-	]
+task violationsWithTestExtension(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
+	maxViolations = extension.maxViolations.get()
+}
+
+/**
+ * Run all tests on build
+ */
+project.tasks.withType(se.bjurr.violations.gradle.plugin.ViolationsTask) { vt ->
+	build.dependsOn vt
 }

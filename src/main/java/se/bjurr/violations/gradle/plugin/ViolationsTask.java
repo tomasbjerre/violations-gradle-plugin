@@ -57,10 +57,6 @@ public class ViolationsTask extends DefaultTask {
   public File violationsFile;
   public ViolationsLogger violationsLogger;
 
-  public void setMaxViolations(final Integer maxViolations) {
-    this.maxViolations.set(maxViolations);
-  }
-
   @TaskAction
   public void violationsPluginTasks() throws Exception {
     this.violationsLogger =
