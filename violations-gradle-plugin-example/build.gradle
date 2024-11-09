@@ -5,7 +5,7 @@ buildscript {
 	}
 
 	dependencies {
-		classpath "se.bjurr.violations:violations-gradle-plugin:+"
+		classpath "se.bjurr.violations:violations-gradle-plugin:latest-SNAPSHOT"
 	}
 }
 
@@ -16,22 +16,22 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
 	//
 	// Optional config
 	//
-	maxReporterColumnWidth = 0 // 0 is disabled
-	maxRuleColumnWidth = 10
-	maxSeverityColumnWidth = 0
-	maxLineColumnWidth = 0
-	maxMessageColumnWidth = 50
-	codeClimateFile = file('code-climate-file.json') // Will create a CodeClimate JSON report.
-	violationsFile = file('violations-file.json') // Will create a normalized JSON report.
+	maxReporterColumnWidth.set(0) // 0 is disabled
+	maxRuleColumnWidth.set(10)
+	maxSeverityColumnWidth.set(0)
+	maxLineColumnWidth.set(0)
+	maxMessageColumnWidth.set(50)
+	codeClimateFile.set(file('code-climate-file.json')) // Will create a CodeClimate JSON report.
+	violationsFile.set(file('violations-file.json')) // Will create a normalized JSON report.
 
 	//
 	// Global configuration, remove if you dont want to report violations for
 	// the entire repo.
 	//
-	minSeverity = 'INFO' // INFO, WARN or ERROR
-	detailLevel = 'VERBOSE' // PER_FILE_COMPACT, COMPACT or VERBOSE
-	maxViolations = 99999999 // Will fail the build if total number of found violations is higher
-	printViolations = true // Will print violations found in diff
+	minSeverity.set(se.bjurr.violations.lib.model.SEVERITY.INFO) // INFO, WARN or ERROR
+	detailLevel.set(se.bjurr.violations.git.ViolationsReporterDetailLevel.VERBOSE) // PER_FILE_COMPACT, COMPACT or VERBOSE
+	maxViolations.set(99999999) // Will fail the build if total number of found violations is higher
+	printViolations.set(true) // Will print violations found in diff
 
 
 	//
@@ -47,13 +47,13 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
 	//  script:
 	//   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./gradlew check -PdiffFrom=$TRAVIS_PULL_REQUEST_BRANCH -PdiffTo=$TRAVIS_BRANCH ; fi'
 	//
-	diffFrom = project.properties.diffFrom // Can be empty (ignored), Git-commit or any Git-reference
-	diffTo = project.properties.diffTo // Same as above
-	diffMinSeverity = 'INFO' // INFO, WARN or ERROR
-	diffDetailLevel = 'VERBOSE' // PER_FILE_COMPACT, COMPACT or VERBOSE
-	diffMaxViolations = 99 // Will fail the build if number of violations, in the diff within from/to, is higher
-	diffPrintViolations = true // Will print violations found in diff
-	gitRepo = file('.') // Where to look for Git
+	diffFrom.set(project.properties.diffFrom) // Can be empty (ignored), Git-commit or any Git-reference
+	diffTo.set(project.properties.diffTo) // Same as above
+	diffMinSeverity.set(se.bjurr.violations.lib.model.SEVERITY.INFO) // INFO, WARN or ERROR
+	diffDetailLevel.set(se.bjurr.violations.git.ViolationsReporterDetailLevel.VERBOSE) // PER_FILE_COMPACT, COMPACT or VERBOSE
+	diffMaxViolations.set(99) // Will fail the build if number of violations, in the diff within from/to, is higher
+	diffPrintViolations.set(true) // Will print violations found in diff
+	gitRepo.set(file('.')) // Where to look for Git
 
 
 	//
@@ -61,6 +61,35 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
 	// revisions or the entire repo.
 	//
 	// Many more formats available, see: https://github.com/tomasbjerre/violations-lib
+	violationConfig()
+		.setFolder(projectDir.path)
+		.setParser(se.bjurr.violations.lib.reports.Parser.FINDBUGS)
+		.setPattern(".*/findbugs/.*\\.xml\$")
+		.setReporter("Findbugs")
+	violationConfig()
+		.setFolder(projectDir.path)
+		.setParser(se.bjurr.violations.lib.reports.Parser.PMD)
+		.setPattern(".*/pmd/.*\\.xml\$")
+		.setReporter("PMD")
+	violationConfig()
+		.setFolder(projectDir.path)
+		.setParser(se.bjurr.violations.lib.reports.Parser.CHECKSTYLE)
+		.setPattern(".*/checkstyle/.*\\.xml\$")
+		.setReporter("Checkstyle")
+	violationConfig()
+		.setFolder(projectDir.path)
+		.setParser(se.bjurr.violations.lib.reports.Parser.JSLINT)
+		.setPattern(".*/jshint/.*\\.xml\$")
+		.setReporter("JSHint")
+	violationConfig()
+		.setFolder(projectDir.path)
+		.setParser(se.bjurr.violations.lib.reports.Parser.CSSLINT)
+		.setPattern(".*/csslint/.*\\.xml\$")
+		.setReporter("CssLint")
+}
+
+
+task violationsLegacyWithoutTypes(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
 	violations = [
 		[
 			"FINDBUGS",
@@ -106,7 +135,7 @@ def extension = project.extensions.create("violationsTestExtension", ViolationsT
 extension.maxViolations.convention(Integer.MAX_VALUE)
 
 task violationsWithTestExtension(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
-	maxViolations = extension.maxViolations.get()
+	maxViolations = extension.maxViolations
 }
 
 /**
