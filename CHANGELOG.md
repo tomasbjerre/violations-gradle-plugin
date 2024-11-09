@@ -1,3 +1,9 @@
+## 3.0.0 (2024-11-09)
+
+### Breaking changes
+
+-  enabling lazy loading of all configuration ([ad35c](https://github.com/tomasbjerre/violations-gradle-plugin/commit/ad35cda8bc6ee14) Tomas Bjerre)  [#23](https://github.com/tomasbjerre/violations-gradle-plugin/issues/23)  
+
 ## 2.3.1 (2024-11-09)
 
 ### Bug Fixes
