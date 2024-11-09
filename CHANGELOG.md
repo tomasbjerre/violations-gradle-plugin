@@ -1,3 +1,9 @@
+## 3.0.1 (2024-11-09)
+
+### Bug Fixes
+
+-  violations-git-lib as API ([9d201](https://github.com/tomasbjerre/violations-gradle-plugin/commit/9d2015d89ab6487) Tomas Bjerre)  
+
 ## 3.0.0 (2024-11-09)
 
 ### Breaking changes
