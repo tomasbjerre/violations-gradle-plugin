@@ -226,7 +226,6 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
         .setParser(se.bjurr.violations.lib.reports.Parser.PMD)
         .setPattern(".*/pmd/.*\\.xml\$")
         .setReporter("PMD")
-    violationConfig()
 }
 
 check.finalizedBy violations
