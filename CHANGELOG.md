@@ -1,3 +1,12 @@
+## 3.0.2 (2024-11-09)
+
+### Bug Fixes
+
+-  properties were missing default values ([3e98c](https://github.com/tomasbjerre/violations-gradle-plugin/commit/3e98c9481eada6c) Tomas Bjerre)  
+
+### Dependency updates
+
+- latest java-convention ([f095e](https://github.com/tomasbjerre/violations-gradle-plugin/commit/f095e6872d0afcc) Tomas Bjerre)  
 ## 3.0.1 (2024-11-09)
 
 ### Bug Fixes
