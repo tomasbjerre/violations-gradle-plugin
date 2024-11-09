@@ -70,13 +70,13 @@ public class ViolationsTask extends DefaultTask {
           .property(ViolationsReporterDetailLevel.class)
           .convention(VERBOSE);
   public Property<Integer> maxReporterColumnWidth =
-      this.getProject().getObjects().property(Integer.class);
+      this.getProject().getObjects().property(Integer.class).convention(0);
   public Property<Integer> maxRuleColumnWidth =
-      this.getProject().getObjects().property(Integer.class);
+      this.getProject().getObjects().property(Integer.class).convention(0);
   public Property<Integer> maxSeverityColumnWidth =
-      this.getProject().getObjects().property(Integer.class);
+      this.getProject().getObjects().property(Integer.class).convention(0);
   public Property<Integer> maxLineColumnWidth =
-      this.getProject().getObjects().property(Integer.class);
+      this.getProject().getObjects().property(Integer.class).convention(0);
   public Property<Integer> maxMessageColumnWidth =
       this.getProject().getObjects().property(Integer.class).convention(30);
   public Property<File> codeClimateFile = this.getProject().getObjects().property(File.class);
