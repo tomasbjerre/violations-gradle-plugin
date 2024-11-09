@@ -5,5 +5,5 @@ plugins {
 }
 
 dependencies {
-	implementation 'se.bjurr.violations:violations-git-lib:2.3.2'
+	api 'se.bjurr.violations:violations-git-lib:2.3.2'
 }
