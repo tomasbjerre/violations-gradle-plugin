@@ -1,3 +1,8 @@
+## 3.0.4 (2025-08-11)
+
+### Dependency updates
+
+- violations-git-lib:2.3.7 ([e828d](https://github.com/tomasbjerre/violations-gradle-plugin/commit/e828d15f07eb1aa) Tomas Bjerre)  
 ## 3.0.3 (2025-07-14)
 
 ### Dependency updates
