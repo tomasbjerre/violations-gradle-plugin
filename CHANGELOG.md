@@ -1,3 +1,8 @@
+## 3.0.5 (2025-08-12)
+
+### Dependency updates
+
+- jgit:7.3.0.202506031305-r ([d7a1d](https://github.com/tomasbjerre/violations-gradle-plugin/commit/d7a1dd9459765af) Tomas Bjerre)  
 ## 3.0.4 (2025-08-11)
 
 ### Dependency updates
