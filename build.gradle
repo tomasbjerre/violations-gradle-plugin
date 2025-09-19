@@ -1,9 +1,17 @@
 plugins {
-	id "se.bjurr.gradle.conventional-release"
-	id "se.bjurr.gradle.java-convention"
-	id "se.bjurr.gradle.update-versions"
+	id "java-gradle-plugin"
+	id "se.bjurr.gradle.bundle-gradle-binaryplugin" version "1.+"
+}
+
+staticCodeAnalysisExtension {
+	maxViolations.set(4)
+}
+
+javaExtension {
+	sourceCompatibility = "11"
+	targetCompatibility = "11"
 }
 
 dependencies {
-	api 'se.bjurr.violations:violations-git-lib:2.3.8'
+	api 'se.bjurr.violations:violations-git-lib-transitives:2.4.0'
 }
