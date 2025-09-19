@@ -1,3 +1,9 @@
+## 4.0.1 (2025-09-19)
+
+### Bug Fixes
+
+-  build with java 11 ([ee110](https://github.com/tomasbjerre/violations-gradle-plugin/commit/ee1103a7e5e2baa) Tomas Bjerre)  
+
 ## 4.0.0 (2025-09-19)
 
 ### Breaking changes
