@@ -1,3 +1,9 @@
+## 4.0.0 (2025-09-19)
+
+### Breaking changes
+
+-  using violations-git-lib with transitives, to make vulnerability scans easier ([ecf40](https://github.com/tomasbjerre/violations-gradle-plugin/commit/ecf40815786259e) Tomas Bjerre)  
+
 ## 3.0.5 (2025-08-12)
 
 ### Dependency updates
