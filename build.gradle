@@ -7,11 +7,6 @@ staticCodeAnalysisExtension {
 	maxViolations.set(4)
 }
 
-javaExtension {
-	sourceCompatibility = "11"
-	targetCompatibility = "11"
-}
-
 dependencies {
-	api 'se.bjurr.violations:violations-git-lib-transitives:2.4.0'
+	api 'se.bjurr.violations:violations-git-lib-transitives:2.4.1'
 }
