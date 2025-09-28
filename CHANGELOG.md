@@ -1,3 +1,9 @@
+## 4.1.0 (2025-09-28)
+
+### Features
+
+-  PMDCPD 7 ([4f735](https://github.com/tomasbjerre/violations-gradle-plugin/commit/4f7358557f33390) Tomas Bjerre)  
+
 ## 4.0.1 (2025-09-19)
 
 ### Bug Fixes
