@@ -19,6 +19,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 import java.util.logging.Level;
+import java.util.stream.Collectors;
+
 import javax.script.ScriptException;
 import org.gradle.api.DefaultTask;
 import org.gradle.api.logging.LogLevel;
@@ -132,7 +134,7 @@ public class ViolationsTask extends DefaultTask {
                       .setPattern(pattern)
                       .setReporter(reporter);
                 })
-            .toList();
+            .collect(Collectors.toList());
 
     this.violations.set(violationConfigs);
   }

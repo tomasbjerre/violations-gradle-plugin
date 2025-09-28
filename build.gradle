@@ -1,6 +1,6 @@
 plugins {
 	id "java-gradle-plugin"
-	id "se.bjurr.gradle.bundle-gradle-binaryplugin" version "1.+"
+	id "se.bjurr.gradle.bundle-gradle-binaryplugin"
 }
 
 staticCodeAnalysisExtension {
@@ -8,5 +8,5 @@ staticCodeAnalysisExtension {
 }
 
 dependencies {
-	api 'se.bjurr.violations:violations-git-lib-transitives:2.4.1'
+	api "se.bjurr.violations:violations-git-lib-transitives:2.5.0"
 }
