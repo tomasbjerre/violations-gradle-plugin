@@ -4,6 +4,12 @@
 
 -  docfx message_severity ([3a9ca](https://github.com/tomasbjerre/violations-gradle-plugin/commit/3a9caa242739172) Tomas Bjerre)  
 
+## 4.1.1 (2025-10-05)
+
+### Bug Fixes
+
+-  docfx message_severity ([3a9ca](https://github.com/tomasbjerre/violations-gradle-plugin/commit/3a9caa242739172) Tomas Bjerre)  
+
 ## 4.1.0 (2025-09-28)
 
 ### Features
