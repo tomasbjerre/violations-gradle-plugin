@@ -5,7 +5,8 @@ This is a Gradle plugin for [Violations Lib](https://github.com/tomasbjerre/viol
 | Version           | Java Version |
 | ------------------| ------------ |
 | version < 2.0.0   | 8            |
-| 2.0.0 <= version  | 11           |
+| 2.0.0 - 4.1.1     | 11           |
+| 4.1.1 < version   | 17           |
 
 Published to [plugins.gradle.org](https://plugins.gradle.org/plugin/se.bjurr.violations.violations-gradle-plugin).
 
