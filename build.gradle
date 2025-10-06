@@ -12,5 +12,5 @@ javaExtension {
 }
 
 dependencies {
-	api "se.bjurr.violations:violations-git-lib-transitives:2.5.1"
+	api "se.bjurr.violations:violations-git-lib-transitives:2.5.2"
 }
