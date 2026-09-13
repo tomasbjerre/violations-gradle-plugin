@@ -1,3 +1,12 @@
+## 4.3.0 (2026-09-13)
+
+### Features
+
+-  avoiding violations-lib fat jar to reduce file sizes ([9fdca](https://github.com/tomasbjerre/violations-gradle-plugin/commit/9fdcafc73cb2069) Tomas Bjerre)  
+
+### Dependency updates
+
+- pin gradle-conventions plugin to released 2.1.1 ([f58a0](https://github.com/tomasbjerre/violations-gradle-plugin/commit/f58a01aa8735852) Tomas Bjerre)  
 ## 4.2.0 (2026-09-13)
 
 ### Features
