@@ -4,7 +4,7 @@ plugins {
 }
 
 staticCodeAnalysisExtension {
-	maxViolations.set(4)
+	maxViolations.set(0)
 }
 
 javaExtension {
