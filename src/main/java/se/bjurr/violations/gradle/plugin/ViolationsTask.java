@@ -90,11 +90,11 @@ public class ViolationsTask extends DefaultTask {
               new ViolationsLogger() {
                 private LogLevel toGradleLogLevel(final Level level) {
                   LogLevel gradleLevel = LogLevel.INFO;
-                  if (level == Level.FINE) {
+                  if (level.equals(Level.FINE)) {
                     gradleLevel = LogLevel.DEBUG;
-                  } else if (level == Level.SEVERE) {
+                  } else if (level.equals(Level.SEVERE)) {
                     gradleLevel = LogLevel.ERROR;
-                  } else if (level == Level.WARNING) {
+                  } else if (level.equals(Level.WARNING)) {
                     gradleLevel = LogLevel.WARN;
                   }
                   return gradleLevel;
@@ -177,7 +177,7 @@ public class ViolationsTask extends DefaultTask {
     final String codeClimateReport =
         new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(object);
     final Path path = file.toPath();
-    path.toFile().getParentFile().mkdirs();
+    Files.createDirectories(path.getParent());
     Files.write(
         path, codeClimateReport.getBytes(StandardCharsets.UTF_8), TRUNCATE_EXISTING, CREATE, WRITE);
   }
