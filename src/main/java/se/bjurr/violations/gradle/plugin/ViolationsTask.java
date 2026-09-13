@@ -33,7 +33,7 @@ import se.bjurr.violations.lib.model.SEVERITY;
 import se.bjurr.violations.lib.model.Violation;
 import se.bjurr.violations.lib.reports.Parser;
 import se.bjurr.violations.lib.util.Filtering;
-import se.bjurr.violations.violationslib.com.google.gson.GsonBuilder;
+import tools.jackson.databind.ObjectMapper;
 
 public class ViolationsTask extends DefaultTask {
 
@@ -174,7 +174,8 @@ public class ViolationsTask extends DefaultTask {
   }
 
   private void createJsonFile(final Object object, final File file) throws IOException {
-    final String codeClimateReport = new GsonBuilder().setPrettyPrinting().create().toJson(object);
+    final String codeClimateReport =
+        new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(object);
     final Path path = file.toPath();
     path.toFile().getParentFile().mkdirs();
     Files.write(
