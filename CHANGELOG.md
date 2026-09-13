@@ -11,6 +11,19 @@
 ### Dependency updates
 
 - gradle 9 ([f15d1](https://github.com/tomasbjerre/violations-gradle-plugin/commit/f15d1125ff908c1) Tomas Bjerre)  
+## 4.2.0 (2026-09-13)
+
+### Features
+
+-  replacing gson with jackson ([2204f](https://github.com/tomasbjerre/violations-gradle-plugin/commit/2204fe5dc29ec12) Tomas Bjerre)  
+
+### Bug Fixes
+
+-  resolve PMD and SpotBugs violations in ViolationsTask ([352d8](https://github.com/tomasbjerre/violations-gradle-plugin/commit/352d8cc5706b2d3) Tomas Bjerre)  
+
+### Dependency updates
+
+- gradle 9 ([f15d1](https://github.com/tomasbjerre/violations-gradle-plugin/commit/f15d1125ff908c1) Tomas Bjerre)  
 ## 4.1.2 (2025-10-05)
 
 ### Bug Fixes
