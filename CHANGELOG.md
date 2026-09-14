@@ -1,3 +1,24 @@
+## 4.4.0 (2026-09-14)
+
+### Features
+
+-  **ci**  add draft/publish release workflow ([3a78a](https://github.com/tomasbjerre/violations-gradle-plugin/commit/3a78a600a1326db) Tomas Bjerre)  
+
+### Bug Fixes
+
+-  **deps**  update dependency se.bjurr.violations:violations-git-lib-transitives to v2.7.0 (#25) ([08ce4](https://github.com/tomasbjerre/violations-gradle-plugin/commit/08ce43a1601530c) renovate[bot])  
+
+### Dependency updates
+
+- update gradle-conventions to 2.2.1 and gradle wrapper to 9.7.1 ([4c5ca](https://github.com/tomasbjerre/violations-gradle-plugin/commit/4c5cac5ae290367) Tomas Bjerre)  
+### Other changes
+
+**Auto-publish pending draft releases weekly**
+
+
+[27012](https://github.com/tomasbjerre/violations-gradle-plugin/commit/27012d95f4fcca1) Tomas Bjerre *2026-09-14 19:47:38*
+
+
 ## 4.3.0 (2026-09-13)
 
 ### Features
