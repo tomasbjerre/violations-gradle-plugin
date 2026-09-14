@@ -1,5 +1,7 @@
 # Violations Gradle Plugin
 
+[![Gradle Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/se.bjurr.violations.violations-gradle-plugin)](https://plugins.gradle.org/plugin/se.bjurr.violations.violations-gradle-plugin)
+
 This is a Gradle plugin for [Violations Lib](https://github.com/tomasbjerre/violations-lib). There is also a [Maven plugin](https://github.com/tomasbjerre/violations-maven-plugin) for this.
 
 | Version           | Java Version |
@@ -7,8 +9,6 @@ This is a Gradle plugin for [Violations Lib](https://github.com/tomasbjerre/viol
 | version < 2.0.0   | 8            |
 | 2.0.0 - 4.1.1     | 11           |
 | 4.1.1 < version   | 17           |
-
-Published to [plugins.gradle.org](https://plugins.gradle.org/plugin/se.bjurr.violations.violations-gradle-plugin).
 
 It can parse results from static code analysis and:
 
