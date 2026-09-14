@@ -26,6 +26,7 @@ import org.gradle.api.logging.LogLevel;
 import org.gradle.api.provider.ListProperty;
 import org.gradle.api.provider.Property;
 import org.gradle.api.tasks.TaskAction;
+import org.gradle.work.DisableCachingByDefault;
 import se.bjurr.violations.git.ViolationsGit;
 import se.bjurr.violations.git.ViolationsReporterDetailLevel;
 import se.bjurr.violations.lib.ViolationsLogger;
@@ -35,6 +36,8 @@ import se.bjurr.violations.lib.reports.Parser;
 import se.bjurr.violations.lib.util.Filtering;
 import tools.jackson.databind.ObjectMapper;
 
+@DisableCachingByDefault(
+    because = "Reads report files from disk and prints violations as a side effect")
 public class ViolationsTask extends DefaultTask {
 
   public ListProperty<ViolationConfig> violations =
