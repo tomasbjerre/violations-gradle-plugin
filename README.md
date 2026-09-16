@@ -1,5 +1,6 @@
 # Violations Gradle Plugin
 
+[![Maven Central](https://img.shields.io/maven-central/v/se.bjurr.violations.violations-gradle-plugin/se.bjurr.violations.violations-gradle-plugin.gradle.plugin.svg?label=Maven%20Central)](https://central.sonatype.com/artifact/se.bjurr.violations.violations-gradle-plugin/se.bjurr.violations.violations-gradle-plugin.gradle.plugin)
 [![Gradle Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/se.bjurr.violations.violations-gradle-plugin)](https://plugins.gradle.org/plugin/se.bjurr.violations.violations-gradle-plugin)
 
 This is a Gradle plugin for [Violations Lib](https://github.com/tomasbjerre/violations-lib). There is also a [Maven plugin](https://github.com/tomasbjerre/violations-maven-plugin) for this.
