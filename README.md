@@ -188,7 +188,7 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
     minSeverity.set(se.bjurr.violations.lib.model.SEVERITY.INFO) // INFO, WARN or ERROR
     detailLevel.set(se.bjurr.violations.git.ViolationsReporterDetailLevel.VERBOSE) // PER_FILE_COMPACT, COMPACT or VERBOSE
     maxViolations.set(99999999) // Will fail the build if total number of found violations is higher
-    printViolations.set(true) // Will print violations found in diff
+    printViolations.set(true) // Will print violations found in repo, nothing is printed if there are none
 
 
     //
@@ -209,7 +209,7 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
     diffMinSeverity.set(se.bjurr.violations.lib.model.SEVERITY.INFO) // INFO, WARN or ERROR
     diffDetailLevel.set(se.bjurr.violations.git.ViolationsReporterDetailLevel.VERBOSE) // PER_FILE_COMPACT, COMPACT or VERBOSE
     diffMaxViolations.set(99) // Will fail the build if number of violations, in the diff within from/to, is higher
-    diffPrintViolations.set(true) // Will print violations found in diff
+    diffPrintViolations.set(true) // Will print violations found in diff, nothing is printed if there are none
     gitRepo.set(file('.')) // Where to look for Git
 
 

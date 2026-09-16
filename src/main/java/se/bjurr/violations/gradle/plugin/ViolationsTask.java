@@ -210,7 +210,7 @@ public class ViolationsTask extends DefaultTask {
               + violations.size()
               + ". You can adjust this with the 'maxViolations' configuration parameter.");
     } else {
-      if (this.printViolations.get()) {
+      if (this.printViolations.get() && !violations.isEmpty()) {
         this.getLogger().lifecycle("\nViolations in repo\n\n" + report);
       }
     }
@@ -241,7 +241,7 @@ public class ViolationsTask extends DefaultTask {
               + violations.size()
               + ". You can adjust this with the 'maxViolations' configuration parameter.");
     } else {
-      if (this.diffPrintViolations.get()) {
+      if (this.diffPrintViolations.get() && !violations.isEmpty()) {
         this.getLogger().lifecycle("\nViolations in diff\n\n" + report);
       }
     }
