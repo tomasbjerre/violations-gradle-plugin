@@ -180,6 +180,7 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
     maxMessageColumnWidth.set(50)
     codeClimateFile.set(file('code-climate-file.json')) // Will create a CodeClimate JSON report.
     violationsFile.set(file('violations-file.json')) // Will create a normalized JSON report.
+    sarifFile.set(file('sarif-file.json')) // Will create a SARIF JSON report.
 
     //
     // Global configuration, remove if you dont want to report violations for
@@ -215,6 +216,7 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
     diffPrintViolations.set(true) // Will print violations found in diff, nothing is printed if there are none
     diffCodeClimateFile.set(file('diff-code-climate-file.json')) // Will create a CodeClimate JSON report with only the violations found in the diff.
     diffViolationsFile.set(file('diff-violations-file.json')) // Will create a normalized JSON report with only the violations found in the diff.
+    diffSarifFile.set(file('diff-sarif-file.json')) // Will create a SARIF JSON report with only the violations found in the diff.
     gitRepo.set(file('.')) // Where to look for Git
 
 

@@ -32,6 +32,7 @@ import se.bjurr.violations.git.ViolationsReporterDetailLevel;
 import se.bjurr.violations.lib.ViolationsLogger;
 import se.bjurr.violations.lib.model.SEVERITY;
 import se.bjurr.violations.lib.model.Violation;
+import se.bjurr.violations.lib.model.sarif.SarifTransformer;
 import se.bjurr.violations.lib.reports.Parser;
 import se.bjurr.violations.lib.util.Filtering;
 import tools.jackson.databind.ObjectMapper;
@@ -87,6 +88,8 @@ public class ViolationsTask extends DefaultTask {
   public Property<File> violationsFile = this.getProject().getObjects().property(File.class);
   public Property<File> diffCodeClimateFile = this.getProject().getObjects().property(File.class);
   public Property<File> diffViolationsFile = this.getProject().getObjects().property(File.class);
+  public Property<File> sarifFile = this.getProject().getObjects().property(File.class);
+  public Property<File> diffSarifFile = this.getProject().getObjects().property(File.class);
   public Property<ViolationsLogger> violationsLogger =
       this.getProject()
           .getObjects()
@@ -171,6 +174,10 @@ public class ViolationsTask extends DefaultTask {
     if (this.violationsFile.isPresent()) {
       this.createJsonFile(allParsedViolations, this.violationsFile.get());
     }
+    if (this.sarifFile.isPresent()) {
+      this.createJsonFile(
+          SarifTransformer.fromViolations(allParsedViolations), this.sarifFile.get());
+    }
     this.checkGlobalViolations(allParsedViolations);
 
     if (this.shouldCheckDiff()) {
@@ -180,6 +187,10 @@ public class ViolationsTask extends DefaultTask {
       }
       if (this.diffViolationsFile.isPresent()) {
         this.createJsonFile(allParsedViolationsInDiff, this.diffViolationsFile.get());
+      }
+      if (this.diffSarifFile.isPresent()) {
+        this.createJsonFile(
+            SarifTransformer.fromViolations(allParsedViolationsInDiff), this.diffSarifFile.get());
       }
       this.checkDiffViolations(allParsedViolationsInDiff);
     }
