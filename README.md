@@ -199,10 +199,13 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
     //
     // ./gradlew violations -i -PdiffFrom=e4de20e -PdiffTo=HEAD
     //
-    // And in Travis, you could add:
+    // And in GitHub Actions, you could add a step like:
     //
-    //  script:
-    //   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./gradlew check -PdiffFrom=$TRAVIS_BRANCH -PdiffTo=$TRAVIS_PULL_REQUEST_BRANCH ; fi'
+    //   - uses: actions/checkout@v4
+    //     with:
+    //       fetch-depth: 0
+    //   - if: github.event_name == 'pull_request'
+    //     run: ./gradlew check -PdiffFrom=${{ github.event.pull_request.base.sha }} -PdiffTo=${{ github.sha }}
     //
     diffFrom.set(project.properties.diffFrom) // Can be empty (ignored), Git-commit or any Git-reference
     diffTo.set(project.properties.diffTo) // Same as above
