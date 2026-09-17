@@ -213,6 +213,8 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
     diffDetailLevel.set(se.bjurr.violations.git.ViolationsReporterDetailLevel.VERBOSE) // PER_FILE_COMPACT, COMPACT or VERBOSE
     diffMaxViolations.set(99) // Will fail the build if number of violations, in the diff within from/to, is higher
     diffPrintViolations.set(true) // Will print violations found in diff, nothing is printed if there are none
+    diffCodeClimateFile.set(file('diff-code-climate-file.json')) // Will create a CodeClimate JSON report with only the violations found in the diff.
+    diffViolationsFile.set(file('diff-violations-file.json')) // Will create a normalized JSON report with only the violations found in the diff.
     gitRepo.set(file('.')) // Where to look for Git
 
 
