@@ -85,8 +85,7 @@ public class ViolationsTask extends DefaultTask {
       this.getProject().getObjects().property(Integer.class).convention(30);
   public Property<File> codeClimateFile = this.getProject().getObjects().property(File.class);
   public Property<File> violationsFile = this.getProject().getObjects().property(File.class);
-  public Property<File> diffCodeClimateFile =
-      this.getProject().getObjects().property(File.class);
+  public Property<File> diffCodeClimateFile = this.getProject().getObjects().property(File.class);
   public Property<File> diffViolationsFile = this.getProject().getObjects().property(File.class);
   public Property<ViolationsLogger> violationsLogger =
       this.getProject()
