@@ -202,7 +202,7 @@ task violations(type: se.bjurr.violations.gradle.plugin.ViolationsTask) {
     // And in Travis, you could add:
     //
     //  script:
-    //   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./gradlew check -PdiffFrom=$TRAVIS_PULL_REQUEST_BRANCH -PdiffTo=$TRAVIS_BRANCH ; fi'
+    //   - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash ./gradlew check -PdiffFrom=$TRAVIS_BRANCH -PdiffTo=$TRAVIS_PULL_REQUEST_BRANCH ; fi'
     //
     diffFrom.set(project.properties.diffFrom) // Can be empty (ignored), Git-commit or any Git-reference
     diffTo.set(project.properties.diffTo) // Same as above
