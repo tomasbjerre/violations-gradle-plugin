@@ -190,8 +190,7 @@ public class ViolationsTask extends DefaultTask {
       }
       if (this.diffSarifFile.isPresent()) {
         this.createJsonFile(
-            SarifTransformer.fromViolations(allParsedViolationsInDiff),
-            this.diffSarifFile.get());
+            SarifTransformer.fromViolations(allParsedViolationsInDiff), this.diffSarifFile.get());
       }
       this.checkDiffViolations(allParsedViolationsInDiff);
     }
