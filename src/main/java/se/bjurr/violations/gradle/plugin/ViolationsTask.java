@@ -287,15 +287,13 @@ public class ViolationsTask extends DefaultTask {
   }
 
   private Set<Violation> getAllParsedViolations(final ViolationConfig configuredViolation) {
-    final Set<Violation> parsedViolations =
-        violationsApi() //
-            .withViolationsLogger(this.violationsLogger.get()) //
-            .findAll(configuredViolation.getParser()) //
-            .inFolder(configuredViolation.getFolder()) //
-            .withPattern(configuredViolation.getPattern()) //
-            .withReporter(configuredViolation.getReporter()) //
-            .violations();
-    return parsedViolations;
+    return violationsApi() //
+        .withViolationsLogger(this.violationsLogger.get()) //
+        .findAll(configuredViolation.getParser()) //
+        .inFolder(configuredViolation.getFolder()) //
+        .withPattern(configuredViolation.getPattern()) //
+        .withReporter(configuredViolation.getReporter()) //
+        .violations();
   }
 
   private boolean isDefined(final String str) {
