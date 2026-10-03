@@ -1,3 +1,10 @@
+## 4.5.1 (2026-10-03)
+
+### Dependency updates
+
+- update plugin se.bjurr.gradle.bundle-gradle-binaryplugin to v2.4.4 ([e06ee](https://github.com/tomasbjerre/violations-gradle-plugin/commit/e06ee4c45d6bc30) Tomas Bjerre)  
+- update plugin se.bjurr.gradle.bundle-gradle-binaryplugin to v2.4.3 (#37) ([e1527](https://github.com/tomasbjerre/violations-gradle-plugin/commit/e1527eebb069212) renovate[bot])  
+- update plugin se.bjurr.gradle.bundle-gradle-binaryplugin to v2.4.1 (#36) ([27c71](https://github.com/tomasbjerre/violations-gradle-plugin/commit/27c714193877e65) renovate[bot])  
 ## 4.4.0 (2026-09-14)
 
 ### Features
